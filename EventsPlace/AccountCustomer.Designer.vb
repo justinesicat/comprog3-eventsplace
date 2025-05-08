@@ -22,6 +22,7 @@ Partial Class AccountCustomer
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(AccountCustomer))
         Me.btn_Minimize = New System.Windows.Forms.Button()
         Me.btn_Close = New System.Windows.Forms.Button()
         Me.lbl_Title = New System.Windows.Forms.Label()
@@ -254,7 +255,7 @@ Partial Class AccountCustomer
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 23.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackgroundImage = Global.EventsPlace.My.Resources.Resources.CustomerViewAccount
+        Me.BackgroundImage = Global.EventsPlace.My.Resources.Resources.FinalCustomerAccount
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.ClientSize = New System.Drawing.Size(972, 547)
         Me.Controls.Add(Me.pbox_Booking)
@@ -275,6 +276,7 @@ Partial Class AccountCustomer
         Me.Controls.Add(Me.btn_Close)
         Me.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.MaximizeBox = False
         Me.Name = "AccountCustomer"

@@ -118,55 +118,61 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="FinalLogoSignUp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FinalLogoSignUp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="PasswordView" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PasswordView.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Banner3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Banner3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Banner1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Banner1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="OrangeGradient" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\OrangeGradient.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="LoginSignUpLogo3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\LoginSignUpLogo1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Banner5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Banner5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="LoginSignUpLogo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\LoginSignUpLogo1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="CustomerViewAccount" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\CustomerViewAccount.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="AdminHome1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\AdminHome.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="CustomerVenue" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\CustomerVenue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="AdminViewAccount" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\AdminViewAccount.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="FinalCustomerViewVenues" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FinalCustomerViewVenues.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="AccountIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\AccountIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Banner4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Banner4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AdminViewAccount" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\AdminViewAccount.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FinalCustomerAccount" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FinalCustomerAccount.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AdminIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\AdminIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FinalCustomerView" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FinalCustomerView.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="AdminHome" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\AdminHome.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="CustomerView" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\CustomerView.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="FinalCustomerBooking" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FinalCustomerBooking.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="AdminEditVenues" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\AdminEditVenues.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="CrossIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\CrossIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="CustomerBooking" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\CustomerBooking.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="LoginSignUp" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\LoginSignUp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Banner2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Banner2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="CustomerIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\CustomerIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="AdminIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\AdminIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="AdminBookingApproval" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\AdminBookingApproval.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -26,13 +26,7 @@ Partial Class BookEventPart1
         Me.btn_Back = New System.Windows.Forms.Button()
         Me.btn_Next = New System.Windows.Forms.Button()
         Me.lbl_Title = New System.Windows.Forms.Label()
-        Me.pbox_Time = New System.Windows.Forms.PictureBox()
-        Me.lbl_TimeEnd = New System.Windows.Forms.Label()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.lbl_TimeStart = New System.Windows.Forms.Label()
-        Me.pbox_Username = New System.Windows.Forms.PictureBox()
-        Me.lbl_End = New System.Windows.Forms.Label()
-        Me.lbl_Start = New System.Windows.Forms.Label()
+        Me.pbox_DateDaysServices = New System.Windows.Forms.PictureBox()
         Me.lbl_Date = New System.Windows.Forms.Label()
         Me.pbox_Day = New System.Windows.Forms.PictureBox()
         Me.lbl_Day = New System.Windows.Forms.Label()
@@ -41,12 +35,6 @@ Partial Class BookEventPart1
         Me.pbox_Year = New System.Windows.Forms.PictureBox()
         Me.lbl_Year = New System.Windows.Forms.Label()
         Me.Calendar = New System.Windows.Forms.MonthCalendar()
-        Me.panel_TimePicker = New System.Windows.Forms.Panel()
-        Me.btn_EndSet = New System.Windows.Forms.Button()
-        Me.btn_StartSet = New System.Windows.Forms.Button()
-        Me.cmb_StartAMPM = New System.Windows.Forms.ComboBox()
-        Me.cmb_StartMinute = New System.Windows.Forms.ComboBox()
-        Me.cmb_StartHour = New System.Windows.Forms.ComboBox()
         Me.pbox_VenueBox = New System.Windows.Forms.PictureBox()
         Me.pbox_VenuePic = New System.Windows.Forms.PictureBox()
         Me.pbox_VenueType = New System.Windows.Forms.PictureBox()
@@ -59,7 +47,6 @@ Partial Class BookEventPart1
         Me.pbox_Venue = New System.Windows.Forms.PictureBox()
         Me.pbox_Account = New System.Windows.Forms.PictureBox()
         Me.lbl_NoImage = New System.Windows.Forms.Label()
-        Me.lbl_Features = New System.Windows.Forms.Label()
         Me.cbox_Lightings = New System.Windows.Forms.CheckBox()
         Me.cbox_Stage = New System.Windows.Forms.CheckBox()
         Me.cbox_WiFi = New System.Windows.Forms.CheckBox()
@@ -67,21 +54,36 @@ Partial Class BookEventPart1
         Me.cbox_SS = New System.Windows.Forms.CheckBox()
         Me.cbox_AC = New System.Windows.Forms.CheckBox()
         Me.lbl_NoOfDays = New System.Windows.Forms.Label()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        CType(Me.pbox_Time, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.pbox_Username, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.pbox_Days = New System.Windows.Forms.PictureBox()
+        Me.txtbox_NoOfDays = New System.Windows.Forms.TextBox()
+        Me.lbl_Services = New System.Windows.Forms.Label()
+        Me.lbl_Days = New System.Windows.Forms.Label()
+        Me.pbox_Services = New System.Windows.Forms.PictureBox()
+        Me.cbox_Photography = New System.Windows.Forms.CheckBox()
+        Me.cbox_Videoke = New System.Windows.Forms.CheckBox()
+        Me.cbox_Dancer = New System.Windows.Forms.CheckBox()
+        Me.cbox_Singer = New System.Windows.Forms.CheckBox()
+        Me.cbox_Clown = New System.Windows.Forms.CheckBox()
+        Me.cbox_Catering = New System.Windows.Forms.CheckBox()
+        Me.lbl_Guests = New System.Windows.Forms.Label()
+        Me.txtbox_NoOfGuests = New System.Windows.Forms.TextBox()
+        Me.pbox_NoOfGuests = New System.Windows.Forms.PictureBox()
+        Me.lbl_NoOfGuests = New System.Windows.Forms.Label()
+        Me.lbl_MaxCapacity = New System.Windows.Forms.Label()
+        Me.lbl_PricePerDay = New System.Windows.Forms.Label()
+        CType(Me.pbox_DateDaysServices, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbox_Day, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbox_Month, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbox_Year, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.panel_TimePicker.SuspendLayout()
         CType(Me.pbox_VenueBox, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbox_VenuePic, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbox_VenueType, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbox_Home, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbox_Venue, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbox_Account, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbox_Days, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbox_Services, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbox_NoOfGuests, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'btn_Back
@@ -119,87 +121,19 @@ Partial Class BookEventPart1
         Me.lbl_Title.ForeColor = System.Drawing.Color.DarkOrange
         Me.lbl_Title.Location = New System.Drawing.Point(96, 18)
         Me.lbl_Title.Name = "lbl_Title"
-        Me.lbl_Title.Size = New System.Drawing.Size(201, 37)
+        Me.lbl_Title.Size = New System.Drawing.Size(537, 37)
         Me.lbl_Title.TabIndex = 30
-        Me.lbl_Title.Text = "BOOK EVENT"
+        Me.lbl_Title.Text = "BOOK EVENT - VENUE INFORMATION"
         '
-        'pbox_Time
+        'pbox_DateDaysServices
         '
-        Me.pbox_Time.BackColor = System.Drawing.Color.SeaShell
-        Me.pbox_Time.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.pbox_Time.Location = New System.Drawing.Point(103, 90)
-        Me.pbox_Time.Name = "pbox_Time"
-        Me.pbox_Time.Size = New System.Drawing.Size(468, 358)
-        Me.pbox_Time.TabIndex = 42
-        Me.pbox_Time.TabStop = False
-        '
-        'lbl_TimeEnd
-        '
-        Me.lbl_TimeEnd.BackColor = System.Drawing.Color.PapayaWhip
-        Me.lbl_TimeEnd.Font = New System.Drawing.Font("Century Gothic", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_TimeEnd.ForeColor = System.Drawing.Color.Chocolate
-        Me.lbl_TimeEnd.Location = New System.Drawing.Point(369, 161)
-        Me.lbl_TimeEnd.Name = "lbl_TimeEnd"
-        Me.lbl_TimeEnd.Size = New System.Drawing.Size(159, 27)
-        Me.lbl_TimeEnd.TabIndex = 48
-        Me.lbl_TimeEnd.Text = "00:00 AM/PM"
-        Me.lbl_TimeEnd.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.BackColor = System.Drawing.Color.PapayaWhip
-        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.PictureBox1.Location = New System.Drawing.Point(356, 150)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(182, 50)
-        Me.PictureBox1.TabIndex = 47
-        Me.PictureBox1.TabStop = False
-        '
-        'lbl_TimeStart
-        '
-        Me.lbl_TimeStart.BackColor = System.Drawing.Color.PapayaWhip
-        Me.lbl_TimeStart.Font = New System.Drawing.Font("Century Gothic", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_TimeStart.ForeColor = System.Drawing.Color.Chocolate
-        Me.lbl_TimeStart.Location = New System.Drawing.Point(151, 161)
-        Me.lbl_TimeStart.Name = "lbl_TimeStart"
-        Me.lbl_TimeStart.Size = New System.Drawing.Size(159, 27)
-        Me.lbl_TimeStart.TabIndex = 46
-        Me.lbl_TimeStart.Text = "00:00 AM/PM"
-        Me.lbl_TimeStart.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'pbox_Username
-        '
-        Me.pbox_Username.BackColor = System.Drawing.Color.PapayaWhip
-        Me.pbox_Username.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.pbox_Username.Location = New System.Drawing.Point(139, 150)
-        Me.pbox_Username.Name = "pbox_Username"
-        Me.pbox_Username.Size = New System.Drawing.Size(182, 50)
-        Me.pbox_Username.TabIndex = 45
-        Me.pbox_Username.TabStop = False
-        '
-        'lbl_End
-        '
-        Me.lbl_End.AutoSize = True
-        Me.lbl_End.BackColor = System.Drawing.Color.SeaShell
-        Me.lbl_End.Font = New System.Drawing.Font("Century Gothic", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_End.ForeColor = System.Drawing.Color.DarkOrange
-        Me.lbl_End.Location = New System.Drawing.Point(375, 104)
-        Me.lbl_End.Name = "lbl_End"
-        Me.lbl_End.Size = New System.Drawing.Size(146, 37)
-        Me.lbl_End.TabIndex = 44
-        Me.lbl_End.Text = "Time End"
-        '
-        'lbl_Start
-        '
-        Me.lbl_Start.AutoSize = True
-        Me.lbl_Start.BackColor = System.Drawing.Color.SeaShell
-        Me.lbl_Start.Font = New System.Drawing.Font("Century Gothic", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_Start.ForeColor = System.Drawing.Color.DarkOrange
-        Me.lbl_Start.Location = New System.Drawing.Point(154, 104)
-        Me.lbl_Start.Name = "lbl_Start"
-        Me.lbl_Start.Size = New System.Drawing.Size(156, 37)
-        Me.lbl_Start.TabIndex = 43
-        Me.lbl_Start.Text = "Time Start"
+        Me.pbox_DateDaysServices.BackColor = System.Drawing.Color.SeaShell
+        Me.pbox_DateDaysServices.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.pbox_DateDaysServices.Location = New System.Drawing.Point(103, 90)
+        Me.pbox_DateDaysServices.Name = "pbox_DateDaysServices"
+        Me.pbox_DateDaysServices.Size = New System.Drawing.Size(468, 358)
+        Me.pbox_DateDaysServices.TabIndex = 42
+        Me.pbox_DateDaysServices.TabStop = False
         '
         'lbl_Date
         '
@@ -207,17 +141,17 @@ Partial Class BookEventPart1
         Me.lbl_Date.BackColor = System.Drawing.Color.SeaShell
         Me.lbl_Date.Font = New System.Drawing.Font("Century Gothic", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_Date.ForeColor = System.Drawing.Color.DarkOrange
-        Me.lbl_Date.Location = New System.Drawing.Point(236, 210)
+        Me.lbl_Date.Location = New System.Drawing.Point(131, 102)
         Me.lbl_Date.Name = "lbl_Date"
-        Me.lbl_Date.Size = New System.Drawing.Size(208, 37)
+        Me.lbl_Date.Size = New System.Drawing.Size(224, 37)
         Me.lbl_Date.TabIndex = 50
-        Me.lbl_Date.Text = "Date of Event"
+        Me.lbl_Date.Text = "Date of Event :"
         '
         'pbox_Day
         '
         Me.pbox_Day.BackColor = System.Drawing.Color.PapayaWhip
         Me.pbox_Day.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.pbox_Day.Location = New System.Drawing.Point(139, 258)
+        Me.pbox_Day.Location = New System.Drawing.Point(138, 150)
         Me.pbox_Day.Name = "pbox_Day"
         Me.pbox_Day.Size = New System.Drawing.Size(91, 50)
         Me.pbox_Day.TabIndex = 54
@@ -228,7 +162,7 @@ Partial Class BookEventPart1
         Me.lbl_Day.BackColor = System.Drawing.Color.PapayaWhip
         Me.lbl_Day.Font = New System.Drawing.Font("Century Gothic", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_Day.ForeColor = System.Drawing.Color.Chocolate
-        Me.lbl_Day.Location = New System.Drawing.Point(145, 270)
+        Me.lbl_Day.Location = New System.Drawing.Point(145, 162)
         Me.lbl_Day.Name = "lbl_Day"
         Me.lbl_Day.Size = New System.Drawing.Size(79, 27)
         Me.lbl_Day.TabIndex = 55
@@ -239,7 +173,7 @@ Partial Class BookEventPart1
         '
         Me.pbox_Month.BackColor = System.Drawing.Color.PapayaWhip
         Me.pbox_Month.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.pbox_Month.Location = New System.Drawing.Point(248, 258)
+        Me.pbox_Month.Location = New System.Drawing.Point(247, 150)
         Me.pbox_Month.Name = "pbox_Month"
         Me.pbox_Month.Size = New System.Drawing.Size(182, 50)
         Me.pbox_Month.TabIndex = 56
@@ -250,7 +184,7 @@ Partial Class BookEventPart1
         Me.lbl_Month.BackColor = System.Drawing.Color.PapayaWhip
         Me.lbl_Month.Font = New System.Drawing.Font("Century Gothic", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_Month.ForeColor = System.Drawing.Color.Chocolate
-        Me.lbl_Month.Location = New System.Drawing.Point(257, 270)
+        Me.lbl_Month.Location = New System.Drawing.Point(258, 162)
         Me.lbl_Month.Name = "lbl_Month"
         Me.lbl_Month.Size = New System.Drawing.Size(163, 27)
         Me.lbl_Month.TabIndex = 57
@@ -261,7 +195,7 @@ Partial Class BookEventPart1
         '
         Me.pbox_Year.BackColor = System.Drawing.Color.PapayaWhip
         Me.pbox_Year.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.pbox_Year.Location = New System.Drawing.Point(447, 258)
+        Me.pbox_Year.Location = New System.Drawing.Point(446, 150)
         Me.pbox_Year.Name = "pbox_Year"
         Me.pbox_Year.Size = New System.Drawing.Size(91, 50)
         Me.pbox_Year.TabIndex = 58
@@ -273,7 +207,7 @@ Partial Class BookEventPart1
         Me.lbl_Year.BackColor = System.Drawing.Color.PapayaWhip
         Me.lbl_Year.Font = New System.Drawing.Font("Century Gothic", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_Year.ForeColor = System.Drawing.Color.Chocolate
-        Me.lbl_Year.Location = New System.Drawing.Point(454, 270)
+        Me.lbl_Year.Location = New System.Drawing.Point(453, 162)
         Me.lbl_Year.Name = "lbl_Year"
         Me.lbl_Year.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.lbl_Year.Size = New System.Drawing.Size(81, 27)
@@ -287,65 +221,6 @@ Partial Class BookEventPart1
         Me.Calendar.Name = "Calendar"
         Me.Calendar.TabIndex = 27
         Me.Calendar.Visible = False
-        '
-        'panel_TimePicker
-        '
-        Me.panel_TimePicker.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.panel_TimePicker.Controls.Add(Me.btn_EndSet)
-        Me.panel_TimePicker.Controls.Add(Me.btn_StartSet)
-        Me.panel_TimePicker.Controls.Add(Me.cmb_StartAMPM)
-        Me.panel_TimePicker.Controls.Add(Me.cmb_StartMinute)
-        Me.panel_TimePicker.Controls.Add(Me.cmb_StartHour)
-        Me.panel_TimePicker.Location = New System.Drawing.Point(966, 540)
-        Me.panel_TimePicker.Name = "panel_TimePicker"
-        Me.panel_TimePicker.Size = New System.Drawing.Size(319, 61)
-        Me.panel_TimePicker.TabIndex = 60
-        Me.panel_TimePicker.Visible = False
-        '
-        'btn_EndSet
-        '
-        Me.btn_EndSet.Location = New System.Drawing.Point(239, 10)
-        Me.btn_EndSet.Name = "btn_EndSet"
-        Me.btn_EndSet.Size = New System.Drawing.Size(65, 39)
-        Me.btn_EndSet.TabIndex = 33
-        Me.btn_EndSet.Text = "SET"
-        Me.btn_EndSet.UseVisualStyleBackColor = True
-        '
-        'btn_StartSet
-        '
-        Me.btn_StartSet.Location = New System.Drawing.Point(239, 10)
-        Me.btn_StartSet.Name = "btn_StartSet"
-        Me.btn_StartSet.Size = New System.Drawing.Size(65, 39)
-        Me.btn_StartSet.TabIndex = 30
-        Me.btn_StartSet.Text = "SET"
-        Me.btn_StartSet.UseVisualStyleBackColor = True
-        '
-        'cmb_StartAMPM
-        '
-        Me.cmb_StartAMPM.FormattingEnabled = True
-        Me.cmb_StartAMPM.Items.AddRange(New Object() {"AM", "PM"})
-        Me.cmb_StartAMPM.Location = New System.Drawing.Point(163, 17)
-        Me.cmb_StartAMPM.Name = "cmb_StartAMPM"
-        Me.cmb_StartAMPM.Size = New System.Drawing.Size(63, 27)
-        Me.cmb_StartAMPM.TabIndex = 32
-        '
-        'cmb_StartMinute
-        '
-        Me.cmb_StartMinute.FormattingEnabled = True
-        Me.cmb_StartMinute.Items.AddRange(New Object() {"00", "05", "10", "15", "20", "25", "30", "35", "40", "45", "50", "55"})
-        Me.cmb_StartMinute.Location = New System.Drawing.Point(90, 17)
-        Me.cmb_StartMinute.Name = "cmb_StartMinute"
-        Me.cmb_StartMinute.Size = New System.Drawing.Size(63, 27)
-        Me.cmb_StartMinute.TabIndex = 31
-        '
-        'cmb_StartHour
-        '
-        Me.cmb_StartHour.FormattingEnabled = True
-        Me.cmb_StartHour.Items.AddRange(New Object() {"01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"})
-        Me.cmb_StartHour.Location = New System.Drawing.Point(17, 17)
-        Me.cmb_StartHour.Name = "cmb_StartHour"
-        Me.cmb_StartHour.Size = New System.Drawing.Size(63, 27)
-        Me.cmb_StartHour.TabIndex = 30
         '
         'pbox_VenueBox
         '
@@ -372,7 +247,7 @@ Partial Class BookEventPart1
         '
         Me.pbox_VenueType.BackColor = System.Drawing.Color.PapayaWhip
         Me.pbox_VenueType.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.pbox_VenueType.Location = New System.Drawing.Point(659, 103)
+        Me.pbox_VenueType.Location = New System.Drawing.Point(658, 103)
         Me.pbox_VenueType.Name = "pbox_VenueType"
         Me.pbox_VenueType.Size = New System.Drawing.Size(207, 50)
         Me.pbox_VenueType.TabIndex = 64
@@ -412,7 +287,7 @@ Partial Class BookEventPart1
         Me.lbl_VenueType.BackColor = System.Drawing.Color.PapayaWhip
         Me.lbl_VenueType.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_VenueType.ForeColor = System.Drawing.Color.Chocolate
-        Me.lbl_VenueType.Location = New System.Drawing.Point(659, 109)
+        Me.lbl_VenueType.Location = New System.Drawing.Point(658, 109)
         Me.lbl_VenueType.Name = "lbl_VenueType"
         Me.lbl_VenueType.Size = New System.Drawing.Size(207, 37)
         Me.lbl_VenueType.TabIndex = 67
@@ -489,24 +364,12 @@ Partial Class BookEventPart1
         Me.lbl_NoImage.BackColor = System.Drawing.Color.White
         Me.lbl_NoImage.Font = New System.Drawing.Font("Century Gothic", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_NoImage.ForeColor = System.Drawing.Color.DimGray
-        Me.lbl_NoImage.Location = New System.Drawing.Point(722, 217)
+        Me.lbl_NoImage.Location = New System.Drawing.Point(728, 217)
         Me.lbl_NoImage.Name = "lbl_NoImage"
         Me.lbl_NoImage.Size = New System.Drawing.Size(75, 37)
         Me.lbl_NoImage.TabIndex = 104
         Me.lbl_NoImage.Text = "N/A"
         Me.lbl_NoImage.Visible = False
-        '
-        'lbl_Features
-        '
-        Me.lbl_Features.AutoSize = True
-        Me.lbl_Features.BackColor = System.Drawing.Color.SeaShell
-        Me.lbl_Features.Font = New System.Drawing.Font("Century Gothic", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_Features.ForeColor = System.Drawing.Color.DarkOrange
-        Me.lbl_Features.Location = New System.Drawing.Point(594, 316)
-        Me.lbl_Features.Name = "lbl_Features"
-        Me.lbl_Features.Size = New System.Drawing.Size(166, 37)
-        Me.lbl_Features.TabIndex = 111
-        Me.lbl_Features.Text = "FEATURES :"
         '
         'cbox_Lightings
         '
@@ -515,7 +378,7 @@ Partial Class BookEventPart1
         Me.cbox_Lightings.Enabled = False
         Me.cbox_Lightings.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbox_Lightings.ForeColor = System.Drawing.Color.Chocolate
-        Me.cbox_Lightings.Location = New System.Drawing.Point(806, 409)
+        Me.cbox_Lightings.Location = New System.Drawing.Point(806, 407)
         Me.cbox_Lightings.Name = "cbox_Lightings"
         Me.cbox_Lightings.Size = New System.Drawing.Size(116, 27)
         Me.cbox_Lightings.TabIndex = 110
@@ -529,7 +392,7 @@ Partial Class BookEventPart1
         Me.cbox_Stage.Enabled = False
         Me.cbox_Stage.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbox_Stage.ForeColor = System.Drawing.Color.Chocolate
-        Me.cbox_Stage.Location = New System.Drawing.Point(806, 383)
+        Me.cbox_Stage.Location = New System.Drawing.Point(806, 381)
         Me.cbox_Stage.Name = "cbox_Stage"
         Me.cbox_Stage.Size = New System.Drawing.Size(87, 27)
         Me.cbox_Stage.TabIndex = 109
@@ -543,7 +406,7 @@ Partial Class BookEventPart1
         Me.cbox_WiFi.Enabled = False
         Me.cbox_WiFi.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbox_WiFi.ForeColor = System.Drawing.Color.Chocolate
-        Me.cbox_WiFi.Location = New System.Drawing.Point(806, 356)
+        Me.cbox_WiFi.Location = New System.Drawing.Point(806, 354)
         Me.cbox_WiFi.Name = "cbox_WiFi"
         Me.cbox_WiFi.Size = New System.Drawing.Size(78, 27)
         Me.cbox_WiFi.TabIndex = 108
@@ -557,7 +420,7 @@ Partial Class BookEventPart1
         Me.cbox_Projector.Enabled = False
         Me.cbox_Projector.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbox_Projector.ForeColor = System.Drawing.Color.Chocolate
-        Me.cbox_Projector.Location = New System.Drawing.Point(601, 409)
+        Me.cbox_Projector.Location = New System.Drawing.Point(601, 407)
         Me.cbox_Projector.Name = "cbox_Projector"
         Me.cbox_Projector.Size = New System.Drawing.Size(118, 27)
         Me.cbox_Projector.TabIndex = 107
@@ -571,7 +434,7 @@ Partial Class BookEventPart1
         Me.cbox_SS.Enabled = False
         Me.cbox_SS.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbox_SS.ForeColor = System.Drawing.Color.Chocolate
-        Me.cbox_SS.Location = New System.Drawing.Point(601, 383)
+        Me.cbox_SS.Location = New System.Drawing.Point(601, 381)
         Me.cbox_SS.Name = "cbox_SS"
         Me.cbox_SS.Size = New System.Drawing.Size(167, 27)
         Me.cbox_SS.TabIndex = 106
@@ -585,7 +448,7 @@ Partial Class BookEventPart1
         Me.cbox_AC.Enabled = False
         Me.cbox_AC.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbox_AC.ForeColor = System.Drawing.Color.Chocolate
-        Me.cbox_AC.Location = New System.Drawing.Point(601, 356)
+        Me.cbox_AC.Location = New System.Drawing.Point(601, 354)
         Me.cbox_AC.Name = "cbox_AC"
         Me.cbox_AC.Size = New System.Drawing.Size(189, 27)
         Me.cbox_AC.TabIndex = 105
@@ -598,32 +461,243 @@ Partial Class BookEventPart1
         Me.lbl_NoOfDays.BackColor = System.Drawing.Color.SeaShell
         Me.lbl_NoOfDays.Font = New System.Drawing.Font("Century Gothic", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_NoOfDays.ForeColor = System.Drawing.Color.DarkOrange
-        Me.lbl_NoOfDays.Location = New System.Drawing.Point(218, 316)
+        Me.lbl_NoOfDays.Location = New System.Drawing.Point(131, 209)
         Me.lbl_NoOfDays.Name = "lbl_NoOfDays"
-        Me.lbl_NoOfDays.Size = New System.Drawing.Size(248, 37)
+        Me.lbl_NoOfDays.Size = New System.Drawing.Size(180, 37)
         Me.lbl_NoOfDays.TabIndex = 112
-        Me.lbl_NoOfDays.Text = "Number of Days"
+        Me.lbl_NoOfDays.Text = "No. of Days"
         '
-        'PictureBox2
+        'pbox_Days
         '
-        Me.PictureBox2.BackColor = System.Drawing.Color.PapayaWhip
-        Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.PictureBox2.Location = New System.Drawing.Point(248, 363)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(182, 50)
-        Me.PictureBox2.TabIndex = 113
-        Me.PictureBox2.TabStop = False
+        Me.pbox_Days.BackColor = System.Drawing.Color.PapayaWhip
+        Me.pbox_Days.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.pbox_Days.Location = New System.Drawing.Point(138, 254)
+        Me.pbox_Days.Name = "pbox_Days"
+        Me.pbox_Days.Size = New System.Drawing.Size(64, 50)
+        Me.pbox_Days.TabIndex = 113
+        Me.pbox_Days.TabStop = False
+        '
+        'txtbox_NoOfDays
+        '
+        Me.txtbox_NoOfDays.BackColor = System.Drawing.Color.PapayaWhip
+        Me.txtbox_NoOfDays.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtbox_NoOfDays.Font = New System.Drawing.Font("Century Gothic", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtbox_NoOfDays.ForeColor = System.Drawing.Color.Chocolate
+        Me.txtbox_NoOfDays.Location = New System.Drawing.Point(148, 265)
+        Me.txtbox_NoOfDays.MaxLength = 2
+        Me.txtbox_NoOfDays.Name = "txtbox_NoOfDays"
+        Me.txtbox_NoOfDays.Size = New System.Drawing.Size(45, 29)
+        Me.txtbox_NoOfDays.TabIndex = 114
+        Me.txtbox_NoOfDays.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'lbl_Services
+        '
+        Me.lbl_Services.AutoSize = True
+        Me.lbl_Services.BackColor = System.Drawing.Color.SeaShell
+        Me.lbl_Services.Font = New System.Drawing.Font("Century Gothic", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_Services.ForeColor = System.Drawing.Color.DarkOrange
+        Me.lbl_Services.Location = New System.Drawing.Point(131, 311)
+        Me.lbl_Services.Name = "lbl_Services"
+        Me.lbl_Services.Size = New System.Drawing.Size(153, 37)
+        Me.lbl_Services.TabIndex = 115
+        Me.lbl_Services.Text = "Services :"
+        '
+        'lbl_Days
+        '
+        Me.lbl_Days.AutoSize = True
+        Me.lbl_Days.BackColor = System.Drawing.Color.SeaShell
+        Me.lbl_Days.Font = New System.Drawing.Font("Century Gothic", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_Days.ForeColor = System.Drawing.Color.Chocolate
+        Me.lbl_Days.Location = New System.Drawing.Point(208, 267)
+        Me.lbl_Days.Name = "lbl_Days"
+        Me.lbl_Days.Size = New System.Drawing.Size(88, 27)
+        Me.lbl_Days.TabIndex = 122
+        Me.lbl_Days.Text = "day / s"
+        '
+        'pbox_Services
+        '
+        Me.pbox_Services.BackColor = System.Drawing.Color.PapayaWhip
+        Me.pbox_Services.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.pbox_Services.Location = New System.Drawing.Point(138, 354)
+        Me.pbox_Services.Name = "pbox_Services"
+        Me.pbox_Services.Size = New System.Drawing.Size(399, 75)
+        Me.pbox_Services.TabIndex = 123
+        Me.pbox_Services.TabStop = False
+        '
+        'cbox_Photography
+        '
+        Me.cbox_Photography.AutoSize = True
+        Me.cbox_Photography.BackColor = System.Drawing.Color.PapayaWhip
+        Me.cbox_Photography.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cbox_Photography.ForeColor = System.Drawing.Color.Chocolate
+        Me.cbox_Photography.Location = New System.Drawing.Point(149, 395)
+        Me.cbox_Photography.Name = "cbox_Photography"
+        Me.cbox_Photography.Size = New System.Drawing.Size(156, 27)
+        Me.cbox_Photography.TabIndex = 129
+        Me.cbox_Photography.Text = "Photography"
+        Me.cbox_Photography.UseVisualStyleBackColor = False
+        '
+        'cbox_Videoke
+        '
+        Me.cbox_Videoke.AutoSize = True
+        Me.cbox_Videoke.BackColor = System.Drawing.Color.PapayaWhip
+        Me.cbox_Videoke.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cbox_Videoke.ForeColor = System.Drawing.Color.Chocolate
+        Me.cbox_Videoke.Location = New System.Drawing.Point(421, 362)
+        Me.cbox_Videoke.Name = "cbox_Videoke"
+        Me.cbox_Videoke.Size = New System.Drawing.Size(115, 27)
+        Me.cbox_Videoke.TabIndex = 128
+        Me.cbox_Videoke.Text = "Videoke"
+        Me.cbox_Videoke.UseVisualStyleBackColor = False
+        '
+        'cbox_Dancer
+        '
+        Me.cbox_Dancer.AutoSize = True
+        Me.cbox_Dancer.BackColor = System.Drawing.Color.PapayaWhip
+        Me.cbox_Dancer.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cbox_Dancer.ForeColor = System.Drawing.Color.Chocolate
+        Me.cbox_Dancer.Location = New System.Drawing.Point(311, 395)
+        Me.cbox_Dancer.Name = "cbox_Dancer"
+        Me.cbox_Dancer.Size = New System.Drawing.Size(103, 27)
+        Me.cbox_Dancer.TabIndex = 127
+        Me.cbox_Dancer.Text = "Dancer"
+        Me.cbox_Dancer.UseVisualStyleBackColor = False
+        '
+        'cbox_Singer
+        '
+        Me.cbox_Singer.AutoSize = True
+        Me.cbox_Singer.BackColor = System.Drawing.Color.PapayaWhip
+        Me.cbox_Singer.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cbox_Singer.ForeColor = System.Drawing.Color.Chocolate
+        Me.cbox_Singer.Location = New System.Drawing.Point(311, 362)
+        Me.cbox_Singer.Name = "cbox_Singer"
+        Me.cbox_Singer.Size = New System.Drawing.Size(91, 27)
+        Me.cbox_Singer.TabIndex = 126
+        Me.cbox_Singer.Text = "Singer"
+        Me.cbox_Singer.UseVisualStyleBackColor = False
+        '
+        'cbox_Clown
+        '
+        Me.cbox_Clown.AutoSize = True
+        Me.cbox_Clown.BackColor = System.Drawing.Color.PapayaWhip
+        Me.cbox_Clown.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cbox_Clown.ForeColor = System.Drawing.Color.Chocolate
+        Me.cbox_Clown.Location = New System.Drawing.Point(421, 395)
+        Me.cbox_Clown.Name = "cbox_Clown"
+        Me.cbox_Clown.Size = New System.Drawing.Size(94, 27)
+        Me.cbox_Clown.TabIndex = 125
+        Me.cbox_Clown.Text = "Clown"
+        Me.cbox_Clown.UseVisualStyleBackColor = False
+        '
+        'cbox_Catering
+        '
+        Me.cbox_Catering.AutoSize = True
+        Me.cbox_Catering.BackColor = System.Drawing.Color.PapayaWhip
+        Me.cbox_Catering.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cbox_Catering.ForeColor = System.Drawing.Color.Chocolate
+        Me.cbox_Catering.Location = New System.Drawing.Point(149, 362)
+        Me.cbox_Catering.Name = "cbox_Catering"
+        Me.cbox_Catering.Size = New System.Drawing.Size(116, 27)
+        Me.cbox_Catering.TabIndex = 124
+        Me.cbox_Catering.Text = "Catering"
+        Me.cbox_Catering.UseVisualStyleBackColor = False
+        '
+        'lbl_Guests
+        '
+        Me.lbl_Guests.AutoSize = True
+        Me.lbl_Guests.BackColor = System.Drawing.Color.SeaShell
+        Me.lbl_Guests.Font = New System.Drawing.Font("Century Gothic", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_Guests.ForeColor = System.Drawing.Color.Chocolate
+        Me.lbl_Guests.Location = New System.Drawing.Point(451, 267)
+        Me.lbl_Guests.Name = "lbl_Guests"
+        Me.lbl_Guests.Size = New System.Drawing.Size(55, 27)
+        Me.lbl_Guests.TabIndex = 133
+        Me.lbl_Guests.Text = "pax"
+        '
+        'txtbox_NoOfGuests
+        '
+        Me.txtbox_NoOfGuests.BackColor = System.Drawing.Color.PapayaWhip
+        Me.txtbox_NoOfGuests.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtbox_NoOfGuests.Font = New System.Drawing.Font("Century Gothic", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtbox_NoOfGuests.ForeColor = System.Drawing.Color.Chocolate
+        Me.txtbox_NoOfGuests.Location = New System.Drawing.Point(362, 265)
+        Me.txtbox_NoOfGuests.MaxLength = 5
+        Me.txtbox_NoOfGuests.Name = "txtbox_NoOfGuests"
+        Me.txtbox_NoOfGuests.Size = New System.Drawing.Size(74, 29)
+        Me.txtbox_NoOfGuests.TabIndex = 132
+        Me.txtbox_NoOfGuests.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'pbox_NoOfGuests
+        '
+        Me.pbox_NoOfGuests.BackColor = System.Drawing.Color.PapayaWhip
+        Me.pbox_NoOfGuests.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.pbox_NoOfGuests.Location = New System.Drawing.Point(352, 254)
+        Me.pbox_NoOfGuests.Name = "pbox_NoOfGuests"
+        Me.pbox_NoOfGuests.Size = New System.Drawing.Size(93, 50)
+        Me.pbox_NoOfGuests.TabIndex = 131
+        Me.pbox_NoOfGuests.TabStop = False
+        '
+        'lbl_NoOfGuests
+        '
+        Me.lbl_NoOfGuests.AutoSize = True
+        Me.lbl_NoOfGuests.BackColor = System.Drawing.Color.SeaShell
+        Me.lbl_NoOfGuests.Font = New System.Drawing.Font("Century Gothic", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_NoOfGuests.ForeColor = System.Drawing.Color.DarkOrange
+        Me.lbl_NoOfGuests.Location = New System.Drawing.Point(345, 209)
+        Me.lbl_NoOfGuests.Name = "lbl_NoOfGuests"
+        Me.lbl_NoOfGuests.Size = New System.Drawing.Size(206, 37)
+        Me.lbl_NoOfGuests.TabIndex = 130
+        Me.lbl_NoOfGuests.Text = "No. of Guests"
+        '
+        'lbl_MaxCapacity
+        '
+        Me.lbl_MaxCapacity.AutoSize = True
+        Me.lbl_MaxCapacity.BackColor = System.Drawing.Color.SeaShell
+        Me.lbl_MaxCapacity.Font = New System.Drawing.Font("Century Gothic", 9.2!, System.Drawing.FontStyle.Bold)
+        Me.lbl_MaxCapacity.ForeColor = System.Drawing.Color.Chocolate
+        Me.lbl_MaxCapacity.Location = New System.Drawing.Point(597, 312)
+        Me.lbl_MaxCapacity.Name = "lbl_MaxCapacity"
+        Me.lbl_MaxCapacity.Size = New System.Drawing.Size(158, 19)
+        Me.lbl_MaxCapacity.TabIndex = 134
+        Me.lbl_MaxCapacity.Text = "max capacity: pax"
+        '
+        'lbl_PricePerDay
+        '
+        Me.lbl_PricePerDay.AutoSize = True
+        Me.lbl_PricePerDay.BackColor = System.Drawing.Color.SeaShell
+        Me.lbl_PricePerDay.Font = New System.Drawing.Font("Century Gothic", 9.2!, System.Drawing.FontStyle.Bold)
+        Me.lbl_PricePerDay.ForeColor = System.Drawing.Color.Chocolate
+        Me.lbl_PricePerDay.Location = New System.Drawing.Point(597, 333)
+        Me.lbl_PricePerDay.Name = "lbl_PricePerDay"
+        Me.lbl_PricePerDay.Size = New System.Drawing.Size(141, 19)
+        Me.lbl_PricePerDay.TabIndex = 135
+        Me.lbl_PricePerDay.Text = "price per day : ₱ "
         '
         'BookEventPart1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 19.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
+        Me.BackgroundImage = Global.EventsPlace.My.Resources.Resources.FinalCustomerBooking
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.ClientSize = New System.Drawing.Size(972, 547)
-        Me.Controls.Add(Me.PictureBox2)
+        Me.Controls.Add(Me.lbl_PricePerDay)
+        Me.Controls.Add(Me.lbl_MaxCapacity)
+        Me.Controls.Add(Me.lbl_Guests)
+        Me.Controls.Add(Me.txtbox_NoOfGuests)
+        Me.Controls.Add(Me.pbox_NoOfGuests)
+        Me.Controls.Add(Me.lbl_NoOfGuests)
+        Me.Controls.Add(Me.cbox_Photography)
+        Me.Controls.Add(Me.cbox_Videoke)
+        Me.Controls.Add(Me.cbox_Dancer)
+        Me.Controls.Add(Me.cbox_Singer)
+        Me.Controls.Add(Me.cbox_Clown)
+        Me.Controls.Add(Me.cbox_Catering)
+        Me.Controls.Add(Me.pbox_Services)
+        Me.Controls.Add(Me.lbl_Days)
+        Me.Controls.Add(Me.lbl_Services)
+        Me.Controls.Add(Me.txtbox_NoOfDays)
+        Me.Controls.Add(Me.pbox_Days)
         Me.Controls.Add(Me.lbl_NoOfDays)
-        Me.Controls.Add(Me.lbl_Features)
         Me.Controls.Add(Me.cbox_Lightings)
         Me.Controls.Add(Me.cbox_Stage)
         Me.Controls.Add(Me.cbox_WiFi)
@@ -642,7 +716,6 @@ Partial Class BookEventPart1
         Me.Controls.Add(Me.pbox_VenueType)
         Me.Controls.Add(Me.pbox_VenuePic)
         Me.Controls.Add(Me.pbox_VenueBox)
-        Me.Controls.Add(Me.panel_TimePicker)
         Me.Controls.Add(Me.lbl_Year)
         Me.Controls.Add(Me.pbox_Year)
         Me.Controls.Add(Me.lbl_Month)
@@ -650,36 +723,30 @@ Partial Class BookEventPart1
         Me.Controls.Add(Me.lbl_Day)
         Me.Controls.Add(Me.pbox_Day)
         Me.Controls.Add(Me.lbl_Date)
-        Me.Controls.Add(Me.lbl_TimeEnd)
-        Me.Controls.Add(Me.PictureBox1)
-        Me.Controls.Add(Me.lbl_TimeStart)
-        Me.Controls.Add(Me.pbox_Username)
-        Me.Controls.Add(Me.lbl_End)
-        Me.Controls.Add(Me.lbl_Start)
-        Me.Controls.Add(Me.pbox_Time)
+        Me.Controls.Add(Me.pbox_DateDaysServices)
         Me.Controls.Add(Me.lbl_Title)
         Me.Controls.Add(Me.btn_Next)
         Me.Controls.Add(Me.Calendar)
         Me.Controls.Add(Me.btn_Back)
         Me.Font = New System.Drawing.Font("Century Gothic", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "BookEventPart1"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        CType(Me.pbox_Time, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.pbox_Username, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbox_DateDaysServices, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pbox_Day, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pbox_Month, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pbox_Year, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.panel_TimePicker.ResumeLayout(False)
         CType(Me.pbox_VenueBox, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pbox_VenuePic, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pbox_VenueType, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pbox_Home, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pbox_Venue, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pbox_Account, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbox_Days, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbox_Services, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbox_NoOfGuests, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -687,13 +754,7 @@ Partial Class BookEventPart1
     Friend WithEvents btn_Back As Button
     Friend WithEvents btn_Next As Button
     Friend WithEvents lbl_Title As Label
-    Friend WithEvents pbox_Time As PictureBox
-    Friend WithEvents lbl_TimeEnd As Label
-    Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents lbl_TimeStart As Label
-    Friend WithEvents pbox_Username As PictureBox
-    Friend WithEvents lbl_End As Label
-    Friend WithEvents lbl_Start As Label
+    Friend WithEvents pbox_DateDaysServices As PictureBox
     Friend WithEvents lbl_Date As Label
     Friend WithEvents pbox_Day As PictureBox
     Friend WithEvents lbl_Day As Label
@@ -702,12 +763,6 @@ Partial Class BookEventPart1
     Friend WithEvents pbox_Year As PictureBox
     Friend WithEvents lbl_Year As Label
     Friend WithEvents Calendar As MonthCalendar
-    Friend WithEvents panel_TimePicker As Panel
-    Friend WithEvents btn_EndSet As Button
-    Friend WithEvents btn_StartSet As Button
-    Friend WithEvents cmb_StartAMPM As ComboBox
-    Friend WithEvents cmb_StartMinute As ComboBox
-    Friend WithEvents cmb_StartHour As ComboBox
     Friend WithEvents pbox_VenueBox As PictureBox
     Friend WithEvents pbox_VenuePic As PictureBox
     Friend WithEvents pbox_VenueType As PictureBox
@@ -720,7 +775,6 @@ Partial Class BookEventPart1
     Friend WithEvents pbox_Venue As PictureBox
     Friend WithEvents pbox_Account As PictureBox
     Friend WithEvents lbl_NoImage As Label
-    Friend WithEvents lbl_Features As Label
     Friend WithEvents cbox_Lightings As CheckBox
     Friend WithEvents cbox_Stage As CheckBox
     Friend WithEvents cbox_WiFi As CheckBox
@@ -728,5 +782,21 @@ Partial Class BookEventPart1
     Friend WithEvents cbox_SS As CheckBox
     Friend WithEvents cbox_AC As CheckBox
     Friend WithEvents lbl_NoOfDays As Label
-    Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents pbox_Days As PictureBox
+    Friend WithEvents txtbox_NoOfDays As TextBox
+    Friend WithEvents lbl_Services As Label
+    Friend WithEvents lbl_Days As Label
+    Friend WithEvents pbox_Services As PictureBox
+    Friend WithEvents cbox_Photography As CheckBox
+    Friend WithEvents cbox_Videoke As CheckBox
+    Friend WithEvents cbox_Dancer As CheckBox
+    Friend WithEvents cbox_Singer As CheckBox
+    Friend WithEvents cbox_Clown As CheckBox
+    Friend WithEvents cbox_Catering As CheckBox
+    Friend WithEvents lbl_Guests As Label
+    Friend WithEvents txtbox_NoOfGuests As TextBox
+    Friend WithEvents pbox_NoOfGuests As PictureBox
+    Friend WithEvents lbl_NoOfGuests As Label
+    Friend WithEvents lbl_MaxCapacity As Label
+    Friend WithEvents lbl_PricePerDay As Label
 End Class

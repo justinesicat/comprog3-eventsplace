@@ -26,13 +26,18 @@
 
         If result = DialogResult.Yes Then
             FastFadeToForm(LoginForm, Me)
-            LoginForm.txtb_Username.Clear()
+            LogOut(Me)
+            LoginForm.txtb_UserName.Clear()
             LoginForm.txtb_Password.Clear()
         End If
     End Sub
 
     Private Sub pbox_Home_Click(sender As Object, e As EventArgs) Handles pbox_Home.Click
         FastFadeToForm(HomeAdminForm, Me)
+    End Sub
+
+    Private Sub pbox_BookingApproval_Click(sender As Object, e As EventArgs) Handles pbox_BookingApproval.Click
+        FastFadeToForm(BookingApproval, Me)
     End Sub
 
     Private Sub btn_Edit_Click(sender As Object, e As EventArgs) Handles btn_Edit.Click

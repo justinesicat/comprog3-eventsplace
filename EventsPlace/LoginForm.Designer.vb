@@ -28,14 +28,14 @@ Partial Class LoginForm
         Me.lbl_Username = New System.Windows.Forms.Label()
         Me.btn_Register = New System.Windows.Forms.Button()
         Me.lbl_Title = New System.Windows.Forms.Label()
-        Me.pbox_Username = New System.Windows.Forms.PictureBox()
-        Me.txtb_Username = New System.Windows.Forms.TextBox()
+        Me.pbox_UserName = New System.Windows.Forms.PictureBox()
+        Me.txtb_UserName = New System.Windows.Forms.TextBox()
         Me.pbox_Password = New System.Windows.Forms.PictureBox()
         Me.txtb_Password = New System.Windows.Forms.TextBox()
         Me.btn_Close = New System.Windows.Forms.Button()
         Me.btn_Minimize = New System.Windows.Forms.Button()
         Me.pbox_viewPassword = New System.Windows.Forms.PictureBox()
-        CType(Me.pbox_Username, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbox_UserName, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbox_Password, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbox_viewPassword, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -98,37 +98,37 @@ Partial Class LoginForm
         'lbl_Title
         '
         Me.lbl_Title.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.lbl_Title.AutoSize = True
         Me.lbl_Title.BackColor = System.Drawing.Color.Transparent
         Me.lbl_Title.Font = New System.Drawing.Font("Century Gothic", 24.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_Title.ForeColor = System.Drawing.Color.DarkOrange
-        Me.lbl_Title.Location = New System.Drawing.Point(652, 53)
+        Me.lbl_Title.Location = New System.Drawing.Point(541, 53)
         Me.lbl_Title.Name = "lbl_Title"
-        Me.lbl_Title.Size = New System.Drawing.Size(170, 50)
+        Me.lbl_Title.Size = New System.Drawing.Size(385, 50)
         Me.lbl_Title.TabIndex = 11
         Me.lbl_Title.Text = "SIGN IN"
+        Me.lbl_Title.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'pbox_Username
+        'pbox_UserName
         '
-        Me.pbox_Username.BackColor = System.Drawing.Color.PapayaWhip
-        Me.pbox_Username.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.pbox_Username.Location = New System.Drawing.Point(541, 179)
-        Me.pbox_Username.Name = "pbox_Username"
-        Me.pbox_Username.Size = New System.Drawing.Size(385, 50)
-        Me.pbox_Username.TabIndex = 12
-        Me.pbox_Username.TabStop = False
+        Me.pbox_UserName.BackColor = System.Drawing.Color.PapayaWhip
+        Me.pbox_UserName.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.pbox_UserName.Location = New System.Drawing.Point(541, 179)
+        Me.pbox_UserName.Name = "pbox_UserName"
+        Me.pbox_UserName.Size = New System.Drawing.Size(385, 50)
+        Me.pbox_UserName.TabIndex = 12
+        Me.pbox_UserName.TabStop = False
         '
-        'txtb_Username
+        'txtb_UserName
         '
-        Me.txtb_Username.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.txtb_Username.BackColor = System.Drawing.Color.PapayaWhip
-        Me.txtb_Username.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtb_Username.Font = New System.Drawing.Font("Century Gothic", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtb_Username.ForeColor = System.Drawing.Color.Chocolate
-        Me.txtb_Username.Location = New System.Drawing.Point(555, 190)
-        Me.txtb_Username.Name = "txtb_Username"
-        Me.txtb_Username.Size = New System.Drawing.Size(358, 29)
-        Me.txtb_Username.TabIndex = 13
+        Me.txtb_UserName.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.txtb_UserName.BackColor = System.Drawing.Color.PapayaWhip
+        Me.txtb_UserName.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtb_UserName.Font = New System.Drawing.Font("Century Gothic", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtb_UserName.ForeColor = System.Drawing.Color.Chocolate
+        Me.txtb_UserName.Location = New System.Drawing.Point(555, 190)
+        Me.txtb_UserName.Name = "txtb_UserName"
+        Me.txtb_UserName.Size = New System.Drawing.Size(358, 29)
+        Me.txtb_UserName.TabIndex = 13
         '
         'pbox_Password
         '
@@ -197,7 +197,7 @@ Partial Class LoginForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 19.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
+        Me.BackgroundImage = Global.EventsPlace.My.Resources.Resources.FinalLogoSignUp
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.ClientSize = New System.Drawing.Size(972, 547)
         Me.Controls.Add(Me.pbox_viewPassword)
@@ -205,8 +205,8 @@ Partial Class LoginForm
         Me.Controls.Add(Me.btn_Close)
         Me.Controls.Add(Me.txtb_Password)
         Me.Controls.Add(Me.pbox_Password)
-        Me.Controls.Add(Me.txtb_Username)
-        Me.Controls.Add(Me.pbox_Username)
+        Me.Controls.Add(Me.txtb_UserName)
+        Me.Controls.Add(Me.pbox_UserName)
         Me.Controls.Add(Me.lbl_Title)
         Me.Controls.Add(Me.btn_Register)
         Me.Controls.Add(Me.btn_Login)
@@ -214,11 +214,12 @@ Partial Class LoginForm
         Me.Controls.Add(Me.lbl_Username)
         Me.Font = New System.Drawing.Font("Century Gothic", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.MaximizeBox = False
         Me.Name = "LoginForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        CType(Me.pbox_Username, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbox_UserName, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pbox_Password, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pbox_viewPassword, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -230,8 +231,8 @@ Partial Class LoginForm
     Friend WithEvents lbl_Username As Label
     Friend WithEvents btn_Register As Button
     Friend WithEvents lbl_Title As Label
-    Friend WithEvents pbox_Username As PictureBox
-    Friend WithEvents txtb_Username As TextBox
+    Friend WithEvents pbox_UserName As PictureBox
+    Friend WithEvents txtb_UserName As TextBox
     Friend WithEvents pbox_Password As PictureBox
     Friend WithEvents txtb_Password As TextBox
     Friend WithEvents btn_Close As Button

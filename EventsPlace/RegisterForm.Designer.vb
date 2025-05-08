@@ -22,21 +22,22 @@ Partial Class RegisterForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(RegisterForm))
         Me.lbl_Password = New System.Windows.Forms.Label()
         Me.lbl_Username = New System.Windows.Forms.Label()
         Me.lbl_ReEnter = New System.Windows.Forms.Label()
         Me.btn_Register = New System.Windows.Forms.Button()
         Me.btn_Back = New System.Windows.Forms.Button()
         Me.lbl_Title = New System.Windows.Forms.Label()
-        Me.pbox_Username = New System.Windows.Forms.PictureBox()
+        Me.pbox_UserName = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.txtb_Username = New System.Windows.Forms.TextBox()
+        Me.txtb_UserName = New System.Windows.Forms.TextBox()
         Me.txtb_Password = New System.Windows.Forms.TextBox()
         Me.txtb_ReEnter = New System.Windows.Forms.TextBox()
         Me.btn_Minimize = New System.Windows.Forms.Button()
         Me.btn_Close = New System.Windows.Forms.Button()
-        CType(Me.pbox_Username, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbox_UserName, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -116,15 +117,15 @@ Partial Class RegisterForm
         Me.lbl_Title.TabIndex = 18
         Me.lbl_Title.Text = "CREATE ACCOUNT"
         '
-        'pbox_Username
+        'pbox_UserName
         '
-        Me.pbox_Username.BackColor = System.Drawing.Color.PapayaWhip
-        Me.pbox_Username.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.pbox_Username.Location = New System.Drawing.Point(541, 149)
-        Me.pbox_Username.Name = "pbox_Username"
-        Me.pbox_Username.Size = New System.Drawing.Size(385, 50)
-        Me.pbox_Username.TabIndex = 19
-        Me.pbox_Username.TabStop = False
+        Me.pbox_UserName.BackColor = System.Drawing.Color.PapayaWhip
+        Me.pbox_UserName.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.pbox_UserName.Location = New System.Drawing.Point(541, 149)
+        Me.pbox_UserName.Name = "pbox_UserName"
+        Me.pbox_UserName.Size = New System.Drawing.Size(385, 50)
+        Me.pbox_UserName.TabIndex = 19
+        Me.pbox_UserName.TabStop = False
         '
         'PictureBox1
         '
@@ -146,16 +147,16 @@ Partial Class RegisterForm
         Me.PictureBox2.TabIndex = 21
         Me.PictureBox2.TabStop = False
         '
-        'txtb_Username
+        'txtb_UserName
         '
-        Me.txtb_Username.BackColor = System.Drawing.Color.PapayaWhip
-        Me.txtb_Username.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtb_Username.Font = New System.Drawing.Font("Century Gothic", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtb_Username.ForeColor = System.Drawing.Color.Chocolate
-        Me.txtb_Username.Location = New System.Drawing.Point(555, 160)
-        Me.txtb_Username.Name = "txtb_Username"
-        Me.txtb_Username.Size = New System.Drawing.Size(358, 29)
-        Me.txtb_Username.TabIndex = 23
+        Me.txtb_UserName.BackColor = System.Drawing.Color.PapayaWhip
+        Me.txtb_UserName.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtb_UserName.Font = New System.Drawing.Font("Century Gothic", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtb_UserName.ForeColor = System.Drawing.Color.Chocolate
+        Me.txtb_UserName.Location = New System.Drawing.Point(555, 160)
+        Me.txtb_UserName.Name = "txtb_UserName"
+        Me.txtb_UserName.Size = New System.Drawing.Size(358, 29)
+        Me.txtb_UserName.TabIndex = 23
         '
         'txtb_Password
         '
@@ -213,17 +214,17 @@ Partial Class RegisterForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 19.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackgroundImage = Global.EventsPlace.My.Resources.Resources.LoginSignUpLogo3
+        Me.BackgroundImage = Global.EventsPlace.My.Resources.Resources.FinalLogoSignUp
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.ClientSize = New System.Drawing.Size(972, 547)
         Me.Controls.Add(Me.btn_Minimize)
         Me.Controls.Add(Me.btn_Close)
         Me.Controls.Add(Me.txtb_ReEnter)
         Me.Controls.Add(Me.txtb_Password)
-        Me.Controls.Add(Me.txtb_Username)
+        Me.Controls.Add(Me.txtb_UserName)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.PictureBox1)
-        Me.Controls.Add(Me.pbox_Username)
+        Me.Controls.Add(Me.pbox_UserName)
         Me.Controls.Add(Me.lbl_Title)
         Me.Controls.Add(Me.btn_Back)
         Me.Controls.Add(Me.btn_Register)
@@ -232,11 +233,12 @@ Partial Class RegisterForm
         Me.Controls.Add(Me.lbl_Username)
         Me.Font = New System.Drawing.Font("Century Gothic", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.MaximizeBox = False
         Me.Name = "RegisterForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        CType(Me.pbox_Username, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbox_UserName, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -249,10 +251,10 @@ Partial Class RegisterForm
     Friend WithEvents btn_Register As Button
     Friend WithEvents btn_Back As Button
     Friend WithEvents lbl_Title As Label
-    Friend WithEvents pbox_Username As PictureBox
+    Friend WithEvents pbox_UserName As PictureBox
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents PictureBox2 As PictureBox
-    Friend WithEvents txtb_Username As TextBox
+    Friend WithEvents txtb_UserName As TextBox
     Friend WithEvents txtb_Password As TextBox
     Friend WithEvents txtb_ReEnter As TextBox
     Friend WithEvents btn_Minimize As Button

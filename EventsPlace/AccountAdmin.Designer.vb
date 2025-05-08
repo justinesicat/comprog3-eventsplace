@@ -22,6 +22,7 @@ Partial Class AccountAdmin
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(AccountAdmin))
         Me.lbl_Title = New System.Windows.Forms.Label()
         Me.lbl_Status = New System.Windows.Forms.Label()
         Me.btn_Cancel = New System.Windows.Forms.Button()
@@ -37,11 +38,13 @@ Partial Class AccountAdmin
         Me.btn_Close = New System.Windows.Forms.Button()
         Me.pbox_Home = New System.Windows.Forms.PictureBox()
         Me.pbox_EditVenues = New System.Windows.Forms.PictureBox()
+        Me.pbox_BookingApproval = New System.Windows.Forms.PictureBox()
         CType(Me.pbox_Password, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbox_Username, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbox_Picture, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbox_Home, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbox_EditVenues, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbox_BookingApproval, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'lbl_Title
@@ -236,6 +239,18 @@ Partial Class AccountAdmin
         Me.pbox_EditVenues.TabIndex = 58
         Me.pbox_EditVenues.TabStop = False
         '
+        'pbox_BookingApproval
+        '
+        Me.pbox_BookingApproval.BackColor = System.Drawing.Color.Transparent
+        Me.pbox_BookingApproval.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.pbox_BookingApproval.ErrorImage = Nothing
+        Me.pbox_BookingApproval.Location = New System.Drawing.Point(0, 68)
+        Me.pbox_BookingApproval.Name = "pbox_BookingApproval"
+        Me.pbox_BookingApproval.Size = New System.Drawing.Size(68, 68)
+        Me.pbox_BookingApproval.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.pbox_BookingApproval.TabIndex = 174
+        Me.pbox_BookingApproval.TabStop = False
+        '
         'AccountAdmin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 19.0!)
@@ -243,6 +258,7 @@ Partial Class AccountAdmin
         Me.BackgroundImage = Global.EventsPlace.My.Resources.Resources.AdminViewAccount
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.ClientSize = New System.Drawing.Size(972, 547)
+        Me.Controls.Add(Me.pbox_BookingApproval)
         Me.Controls.Add(Me.pbox_EditVenues)
         Me.Controls.Add(Me.pbox_Home)
         Me.Controls.Add(Me.lbl_Status)
@@ -260,6 +276,7 @@ Partial Class AccountAdmin
         Me.Controls.Add(Me.lbl_Title)
         Me.Font = New System.Drawing.Font("Century Gothic", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "AccountAdmin"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -268,6 +285,7 @@ Partial Class AccountAdmin
         CType(Me.pbox_Picture, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pbox_Home, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pbox_EditVenues, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbox_BookingApproval, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -288,4 +306,5 @@ Partial Class AccountAdmin
     Friend WithEvents btn_Close As Button
     Friend WithEvents pbox_Home As PictureBox
     Friend WithEvents pbox_EditVenues As PictureBox
+    Friend WithEvents pbox_BookingApproval As PictureBox
 End Class

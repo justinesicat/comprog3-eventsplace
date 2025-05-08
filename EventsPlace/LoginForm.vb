@@ -16,27 +16,27 @@ Public Class LoginForm
 
     Private Sub btn_Register_Click(sender As Object, e As EventArgs) Handles btn_Register.Click
         FastFadeToForm(RegisterForm, Me)
-        RegisterForm.txtb_Username.Clear()
+        RegisterForm.txtb_UserName.Clear()
         RegisterForm.txtb_Password.Clear()
         RegisterForm.txtb_ReEnter.Clear()
     End Sub
 
     Private Sub btn_Login_Click(sender As Object, e As EventArgs) Handles btn_Login.Click
-        If txtb_Username.Text IsNot "" And txtb_Password.Text IsNot "" Then
+        If txtb_UserName.Text IsNot "" And txtb_Password.Text IsNot "" Then
             Try
-                If PasswordMatch(txtb_Username.Text, txtb_Password.Text) Then
-                    MsgBox("Login successful. Welcome, " & txtb_Username.Text & "!", MsgBoxStyle.Information, "")
+                If PasswordMatch(txtb_UserName.Text, txtb_Password.Text) Then
+                    MsgBox("Login successful. Welcome, " & txtb_UserName.Text & "!", MsgBoxStyle.Information, "")
 
                     Try
-                        If IsAdmin(txtb_Username.Text) Then
-                            username = txtb_Username.Text
-                            HomeAdminForm.setUsername(username)
-                            AccountAdmin.setUsernamePassword(txtb_Username.Text, txtb_Password.Text)
+                        If IsAdmin(txtb_UserName.Text) Then
+                            userName = txtb_UserName.Text
+                            HomeAdminForm.setUsername(userName)
+                            AccountAdmin.setUsernamePassword(txtb_UserName.Text, txtb_Password.Text)
                             FastFadeToForm(HomeAdminForm, Me)
                         Else
-                            username = txtb_Username.Text
-                            HomeCustomerForm.setUsername(username)
-                            AccountCustomer.setUsernamePassword(txtb_Username.Text, txtb_Password.Text)
+                            userName = txtb_UserName.Text
+                            HomeCustomerForm.setUsername(userName)
+                            AccountCustomer.setUsernamePassword(txtb_UserName.Text, txtb_Password.Text)
                             FastFadeToForm(HomeCustomerForm, Me)
                             Me.Hide()
                         End If

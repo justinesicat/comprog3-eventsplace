@@ -22,6 +22,7 @@ Partial Class EditVenues
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(EditVenues))
         Me.btn_Edit = New System.Windows.Forms.Button()
         Me.btn_New = New System.Windows.Forms.Button()
         Me.btn_Save = New System.Windows.Forms.Button()
@@ -34,15 +35,12 @@ Partial Class EditVenues
         Me.btn_Close = New System.Windows.Forms.Button()
         Me.pbox_Home = New System.Windows.Forms.PictureBox()
         Me.pbox_VenueInfo1 = New System.Windows.Forms.PictureBox()
-        Me.txtb_Price = New System.Windows.Forms.TextBox()
+        Me.txtbox_Price = New System.Windows.Forms.TextBox()
         Me.pbox_Price = New System.Windows.Forms.PictureBox()
-        Me.txtb_Capacity = New System.Windows.Forms.TextBox()
+        Me.txtbox_Capacity = New System.Windows.Forms.TextBox()
         Me.pbox_Capacity = New System.Windows.Forms.PictureBox()
-        Me.txtb_Type = New System.Windows.Forms.TextBox()
+        Me.txtbox_Type = New System.Windows.Forms.TextBox()
         Me.pbox_Username = New System.Windows.Forms.PictureBox()
-        Me.lbl_Price = New System.Windows.Forms.Label()
-        Me.lbl_Capacity = New System.Windows.Forms.Label()
-        Me.lbl_Type = New System.Windows.Forms.Label()
         Me.VenueTable = New System.Windows.Forms.DataGridView()
         Me.pbox_VenueInfo2 = New System.Windows.Forms.PictureBox()
         Me.pbox_VenuePic = New System.Windows.Forms.PictureBox()
@@ -56,6 +54,10 @@ Partial Class EditVenues
         Me.btn_UploadImage = New System.Windows.Forms.Button()
         Me.lbl_NoImage = New System.Windows.Forms.Label()
         Me.pbox_Account = New System.Windows.Forms.PictureBox()
+        Me.lbl_Price = New System.Windows.Forms.Label()
+        Me.lbl_Capacity = New System.Windows.Forms.Label()
+        Me.lbl_Type = New System.Windows.Forms.Label()
+        Me.pbox_BookingApproval = New System.Windows.Forms.PictureBox()
         CType(Me.pbox_Home, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbox_VenueInfo1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbox_Price, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -65,6 +67,7 @@ Partial Class EditVenues
         CType(Me.pbox_VenueInfo2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbox_VenuePic, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbox_Account, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbox_BookingApproval, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'btn_Edit
@@ -221,110 +224,74 @@ Partial Class EditVenues
         Me.pbox_VenueInfo1.TabIndex = 81
         Me.pbox_VenueInfo1.TabStop = False
         '
-        'txtb_Price
+        'txtbox_Price
         '
-        Me.txtb_Price.BackColor = System.Drawing.Color.PapayaWhip
-        Me.txtb_Price.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtb_Price.Enabled = False
-        Me.txtb_Price.Font = New System.Drawing.Font("Century Gothic", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtb_Price.ForeColor = System.Drawing.Color.Chocolate
-        Me.txtb_Price.Location = New System.Drawing.Point(291, 394)
-        Me.txtb_Price.MaxLength = 16
-        Me.txtb_Price.Name = "txtb_Price"
-        Me.txtb_Price.Size = New System.Drawing.Size(257, 29)
-        Me.txtb_Price.TabIndex = 91
+        Me.txtbox_Price.BackColor = System.Drawing.Color.PapayaWhip
+        Me.txtbox_Price.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtbox_Price.Enabled = False
+        Me.txtbox_Price.Font = New System.Drawing.Font("Century Gothic", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtbox_Price.ForeColor = System.Drawing.Color.Chocolate
+        Me.txtbox_Price.Location = New System.Drawing.Point(177, 399)
+        Me.txtbox_Price.MaxLength = 16
+        Me.txtbox_Price.Name = "txtbox_Price"
+        Me.txtbox_Price.Size = New System.Drawing.Size(320, 29)
+        Me.txtbox_Price.TabIndex = 91
         '
         'pbox_Price
         '
         Me.pbox_Price.BackColor = System.Drawing.Color.PapayaWhip
         Me.pbox_Price.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.pbox_Price.Location = New System.Drawing.Point(282, 383)
+        Me.pbox_Price.Location = New System.Drawing.Point(166, 370)
         Me.pbox_Price.Name = "pbox_Price"
-        Me.pbox_Price.Size = New System.Drawing.Size(275, 50)
+        Me.pbox_Price.Size = New System.Drawing.Size(342, 66)
         Me.pbox_Price.TabIndex = 90
         Me.pbox_Price.TabStop = False
         '
-        'txtb_Capacity
+        'txtbox_Capacity
         '
-        Me.txtb_Capacity.BackColor = System.Drawing.Color.PapayaWhip
-        Me.txtb_Capacity.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtb_Capacity.Enabled = False
-        Me.txtb_Capacity.Font = New System.Drawing.Font("Century Gothic", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtb_Capacity.ForeColor = System.Drawing.Color.Chocolate
-        Me.txtb_Capacity.Location = New System.Drawing.Point(291, 334)
-        Me.txtb_Capacity.MaxLength = 4
-        Me.txtb_Capacity.Name = "txtb_Capacity"
-        Me.txtb_Capacity.Size = New System.Drawing.Size(257, 29)
-        Me.txtb_Capacity.TabIndex = 89
+        Me.txtbox_Capacity.BackColor = System.Drawing.Color.PapayaWhip
+        Me.txtbox_Capacity.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtbox_Capacity.Enabled = False
+        Me.txtbox_Capacity.Font = New System.Drawing.Font("Century Gothic", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtbox_Capacity.ForeColor = System.Drawing.Color.Chocolate
+        Me.txtbox_Capacity.Location = New System.Drawing.Point(177, 325)
+        Me.txtbox_Capacity.MaxLength = 4
+        Me.txtbox_Capacity.Name = "txtbox_Capacity"
+        Me.txtbox_Capacity.Size = New System.Drawing.Size(320, 29)
+        Me.txtbox_Capacity.TabIndex = 89
         '
         'pbox_Capacity
         '
         Me.pbox_Capacity.BackColor = System.Drawing.Color.PapayaWhip
         Me.pbox_Capacity.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.pbox_Capacity.Location = New System.Drawing.Point(282, 324)
+        Me.pbox_Capacity.Location = New System.Drawing.Point(166, 296)
         Me.pbox_Capacity.Name = "pbox_Capacity"
-        Me.pbox_Capacity.Size = New System.Drawing.Size(275, 50)
+        Me.pbox_Capacity.Size = New System.Drawing.Size(342, 66)
         Me.pbox_Capacity.TabIndex = 88
         Me.pbox_Capacity.TabStop = False
         '
-        'txtb_Type
+        'txtbox_Type
         '
-        Me.txtb_Type.BackColor = System.Drawing.Color.PapayaWhip
-        Me.txtb_Type.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtb_Type.Enabled = False
-        Me.txtb_Type.Font = New System.Drawing.Font("Century Gothic", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtb_Type.ForeColor = System.Drawing.Color.Chocolate
-        Me.txtb_Type.Location = New System.Drawing.Point(291, 275)
-        Me.txtb_Type.MaxLength = 16
-        Me.txtb_Type.Name = "txtb_Type"
-        Me.txtb_Type.Size = New System.Drawing.Size(257, 29)
-        Me.txtb_Type.TabIndex = 87
+        Me.txtbox_Type.BackColor = System.Drawing.Color.PapayaWhip
+        Me.txtbox_Type.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtbox_Type.Enabled = False
+        Me.txtbox_Type.Font = New System.Drawing.Font("Century Gothic", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtbox_Type.ForeColor = System.Drawing.Color.Chocolate
+        Me.txtbox_Type.Location = New System.Drawing.Point(177, 251)
+        Me.txtbox_Type.MaxLength = 16
+        Me.txtbox_Type.Name = "txtbox_Type"
+        Me.txtbox_Type.Size = New System.Drawing.Size(320, 29)
+        Me.txtbox_Type.TabIndex = 87
         '
         'pbox_Username
         '
         Me.pbox_Username.BackColor = System.Drawing.Color.PapayaWhip
         Me.pbox_Username.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.pbox_Username.Location = New System.Drawing.Point(282, 265)
+        Me.pbox_Username.Location = New System.Drawing.Point(166, 222)
         Me.pbox_Username.Name = "pbox_Username"
-        Me.pbox_Username.Size = New System.Drawing.Size(275, 50)
+        Me.pbox_Username.Size = New System.Drawing.Size(342, 66)
         Me.pbox_Username.TabIndex = 86
         Me.pbox_Username.TabStop = False
-        '
-        'lbl_Price
-        '
-        Me.lbl_Price.AutoSize = True
-        Me.lbl_Price.BackColor = System.Drawing.Color.SeaShell
-        Me.lbl_Price.Font = New System.Drawing.Font("Century Gothic", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_Price.ForeColor = System.Drawing.Color.DarkOrange
-        Me.lbl_Price.Location = New System.Drawing.Point(114, 389)
-        Me.lbl_Price.Name = "lbl_Price"
-        Me.lbl_Price.Size = New System.Drawing.Size(105, 37)
-        Me.lbl_Price.TabIndex = 85
-        Me.lbl_Price.Text = "Price :"
-        '
-        'lbl_Capacity
-        '
-        Me.lbl_Capacity.AutoSize = True
-        Me.lbl_Capacity.BackColor = System.Drawing.Color.SeaShell
-        Me.lbl_Capacity.Font = New System.Drawing.Font("Century Gothic", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_Capacity.ForeColor = System.Drawing.Color.DarkOrange
-        Me.lbl_Capacity.Location = New System.Drawing.Point(114, 330)
-        Me.lbl_Capacity.Name = "lbl_Capacity"
-        Me.lbl_Capacity.Size = New System.Drawing.Size(168, 37)
-        Me.lbl_Capacity.TabIndex = 84
-        Me.lbl_Capacity.Text = "Capacity :"
-        '
-        'lbl_Type
-        '
-        Me.lbl_Type.AutoSize = True
-        Me.lbl_Type.BackColor = System.Drawing.Color.SeaShell
-        Me.lbl_Type.Font = New System.Drawing.Font("Century Gothic", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_Type.ForeColor = System.Drawing.Color.DarkOrange
-        Me.lbl_Type.Location = New System.Drawing.Point(114, 271)
-        Me.lbl_Type.Name = "lbl_Type"
-        Me.lbl_Type.Size = New System.Drawing.Size(102, 37)
-        Me.lbl_Type.TabIndex = 83
-        Me.lbl_Type.Text = "Type :"
         '
         'VenueTable
         '
@@ -333,13 +300,13 @@ Partial Class EditVenues
         Me.VenueTable.AllowUserToResizeColumns = False
         Me.VenueTable.AllowUserToResizeRows = False
         Me.VenueTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.VenueTable.Location = New System.Drawing.Point(118, 104)
+        Me.VenueTable.Location = New System.Drawing.Point(166, 103)
         Me.VenueTable.Name = "VenueTable"
         Me.VenueTable.ReadOnly = True
         Me.VenueTable.RowHeadersWidth = 51
         Me.VenueTable.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
         Me.VenueTable.RowTemplate.Height = 24
-        Me.VenueTable.Size = New System.Drawing.Size(439, 148)
+        Me.VenueTable.Size = New System.Drawing.Size(342, 110)
         Me.VenueTable.TabIndex = 82
         '
         'pbox_VenueInfo2
@@ -498,6 +465,54 @@ Partial Class EditVenues
         Me.pbox_Account.TabIndex = 104
         Me.pbox_Account.TabStop = False
         '
+        'lbl_Price
+        '
+        Me.lbl_Price.AutoSize = True
+        Me.lbl_Price.BackColor = System.Drawing.Color.PapayaWhip
+        Me.lbl_Price.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_Price.ForeColor = System.Drawing.Color.DarkOrange
+        Me.lbl_Price.Location = New System.Drawing.Point(173, 373)
+        Me.lbl_Price.Name = "lbl_Price"
+        Me.lbl_Price.Size = New System.Drawing.Size(141, 23)
+        Me.lbl_Price.TabIndex = 108
+        Me.lbl_Price.Text = "Price per Day"
+        '
+        'lbl_Capacity
+        '
+        Me.lbl_Capacity.AutoSize = True
+        Me.lbl_Capacity.BackColor = System.Drawing.Color.PapayaWhip
+        Me.lbl_Capacity.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_Capacity.ForeColor = System.Drawing.Color.DarkOrange
+        Me.lbl_Capacity.Location = New System.Drawing.Point(173, 299)
+        Me.lbl_Capacity.Name = "lbl_Capacity"
+        Me.lbl_Capacity.Size = New System.Drawing.Size(101, 23)
+        Me.lbl_Capacity.TabIndex = 107
+        Me.lbl_Capacity.Text = "Capacity"
+        '
+        'lbl_Type
+        '
+        Me.lbl_Type.AutoSize = True
+        Me.lbl_Type.BackColor = System.Drawing.Color.PapayaWhip
+        Me.lbl_Type.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_Type.ForeColor = System.Drawing.Color.DarkOrange
+        Me.lbl_Type.Location = New System.Drawing.Point(173, 225)
+        Me.lbl_Type.Name = "lbl_Type"
+        Me.lbl_Type.Size = New System.Drawing.Size(56, 23)
+        Me.lbl_Type.TabIndex = 106
+        Me.lbl_Type.Text = "Type"
+        '
+        'pbox_BookingApproval
+        '
+        Me.pbox_BookingApproval.BackColor = System.Drawing.Color.Transparent
+        Me.pbox_BookingApproval.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.pbox_BookingApproval.ErrorImage = Nothing
+        Me.pbox_BookingApproval.Location = New System.Drawing.Point(0, 68)
+        Me.pbox_BookingApproval.Name = "pbox_BookingApproval"
+        Me.pbox_BookingApproval.Size = New System.Drawing.Size(68, 68)
+        Me.pbox_BookingApproval.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.pbox_BookingApproval.TabIndex = 174
+        Me.pbox_BookingApproval.TabStop = False
+        '
         'EditVenues
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 19.0!)
@@ -505,6 +520,10 @@ Partial Class EditVenues
         Me.BackgroundImage = Global.EventsPlace.My.Resources.Resources.AdminEditVenues
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.ClientSize = New System.Drawing.Size(972, 547)
+        Me.Controls.Add(Me.pbox_BookingApproval)
+        Me.Controls.Add(Me.lbl_Price)
+        Me.Controls.Add(Me.lbl_Capacity)
+        Me.Controls.Add(Me.lbl_Type)
         Me.Controls.Add(Me.pbox_Account)
         Me.Controls.Add(Me.lbl_NoImage)
         Me.Controls.Add(Me.btn_UploadImage)
@@ -517,15 +536,12 @@ Partial Class EditVenues
         Me.Controls.Add(Me.cbox_SS)
         Me.Controls.Add(Me.cbox_AC)
         Me.Controls.Add(Me.pbox_VenueInfo2)
-        Me.Controls.Add(Me.txtb_Price)
+        Me.Controls.Add(Me.txtbox_Price)
         Me.Controls.Add(Me.pbox_Price)
-        Me.Controls.Add(Me.txtb_Capacity)
+        Me.Controls.Add(Me.txtbox_Capacity)
         Me.Controls.Add(Me.pbox_Capacity)
-        Me.Controls.Add(Me.txtb_Type)
+        Me.Controls.Add(Me.txtbox_Type)
         Me.Controls.Add(Me.pbox_Username)
-        Me.Controls.Add(Me.lbl_Price)
-        Me.Controls.Add(Me.lbl_Capacity)
-        Me.Controls.Add(Me.lbl_Type)
         Me.Controls.Add(Me.VenueTable)
         Me.Controls.Add(Me.pbox_VenueInfo1)
         Me.Controls.Add(Me.pbox_Home)
@@ -541,6 +557,7 @@ Partial Class EditVenues
         Me.Controls.Add(Me.btn_Edit)
         Me.Font = New System.Drawing.Font("Century Gothic", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "EditVenues"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -553,6 +570,7 @@ Partial Class EditVenues
         CType(Me.pbox_VenueInfo2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pbox_VenuePic, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pbox_Account, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbox_BookingApproval, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -569,15 +587,12 @@ Partial Class EditVenues
     Friend WithEvents btn_Close As Button
     Friend WithEvents pbox_Home As PictureBox
     Friend WithEvents pbox_VenueInfo1 As PictureBox
-    Friend WithEvents txtb_Price As TextBox
+    Friend WithEvents txtbox_Price As TextBox
     Friend WithEvents pbox_Price As PictureBox
-    Friend WithEvents txtb_Capacity As TextBox
+    Friend WithEvents txtbox_Capacity As TextBox
     Friend WithEvents pbox_Capacity As PictureBox
-    Friend WithEvents txtb_Type As TextBox
+    Friend WithEvents txtbox_Type As TextBox
     Friend WithEvents pbox_Username As PictureBox
-    Friend WithEvents lbl_Price As Label
-    Friend WithEvents lbl_Capacity As Label
-    Friend WithEvents lbl_Type As Label
     Friend WithEvents VenueTable As DataGridView
     Friend WithEvents pbox_VenueInfo2 As PictureBox
     Friend WithEvents pbox_VenuePic As PictureBox
@@ -591,4 +606,8 @@ Partial Class EditVenues
     Friend WithEvents btn_UploadImage As Button
     Friend WithEvents lbl_NoImage As Label
     Friend WithEvents pbox_Account As PictureBox
+    Friend WithEvents lbl_Price As Label
+    Friend WithEvents lbl_Capacity As Label
+    Friend WithEvents lbl_Type As Label
+    Friend WithEvents pbox_BookingApproval As PictureBox
 End Class

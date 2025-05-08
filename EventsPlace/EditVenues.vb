@@ -21,9 +21,19 @@ Public Class EditVenues
         FastFadeToForm(HomeAdminForm, Me)
     End Sub
 
+    Private Sub pbox_BookingApproval_Click(sender As Object, e As EventArgs) Handles pbox_BookingApproval.Click
+        FastFadeToForm(BookingApproval, Me)
+    End Sub
+
+    Private Sub btn_Back_Click(sender As Object, e As EventArgs) Handles btn_Back.Click
+        FastFadeToForm(HomeAdminForm, Me)
+    End Sub
+
+
     Private Sub EditVenues_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         EVloadTable()
-        VenueTable.Columns("PLACEID").Visible = False
+        VenueTable.Columns("CAPACITY").Visible = False
+        VenueTable.Columns("PRICE").Visible = False
         VenueTable.Columns("FEATURES").Visible = False
 
         btn_Cancel.Visible = False
@@ -45,9 +55,9 @@ Public Class EditVenues
             Exit Sub
         End If
 
-        txtb_Type.Text = VenueTable("TYPE", VenueTable.CurrentRow.Index).Value
-        txtb_Capacity.Text = VenueTable("CAPACITY", VenueTable.CurrentRow.Index).Value
-        txtb_Price.Text = VenueTable("PRICE", VenueTable.CurrentRow.Index).Value
+        txtbox_Type.Text = VenueTable("TYPE", VenueTable.CurrentRow.Index).Value
+        txtbox_Capacity.Text = VenueTable("CAPACITY", VenueTable.CurrentRow.Index).Value
+        txtbox_Price.Text = VenueTable("PRICE", VenueTable.CurrentRow.Index).Value
         placeid = VenueTable("PLACEID", VenueTable.CurrentRow.Index).Value
 
         Dim features As String = VenueTable.CurrentRow.Cells("FEATURES").Value.ToString()
@@ -59,15 +69,11 @@ Public Class EditVenues
         btn_Delete.Enabled = True
     End Sub
 
-    Private Sub btn_Back_Click(sender As Object, e As EventArgs) Handles btn_Back.Click
-        FastFadeToForm(HomeAdminForm, Me)
-    End Sub
-
     Private Sub btn_New_Click(sender As Object, e As EventArgs) Handles btn_New.Click
         doubleClickEnabled = False
-        txtb_Type.Clear()
-        txtb_Capacity.Clear()
-        txtb_Price.Clear()
+        txtbox_Type.Clear()
+        txtbox_Capacity.Clear()
+        txtbox_Price.Clear()
 
         EnableEditVenues()
 
@@ -84,9 +90,9 @@ Public Class EditVenues
 
     Private Sub btn_Cancel_Click(sender As Object, e As EventArgs) Handles btn_Cancel.Click
         doubleClickEnabled = True
-        txtb_Type.Clear()
-        txtb_Capacity.Clear()
-        txtb_Price.Clear()
+        txtbox_Type.Clear()
+        txtbox_Capacity.Clear()
+        txtbox_Price.Clear()
 
         EVUncheckCB()
         DisableEditVenues()
@@ -107,18 +113,20 @@ Public Class EditVenues
 
     Private Sub btn_Save_Click(sender As Object, e As EventArgs) Handles btn_Save.Click
         doubleClickEnabled = True
-        If txtb_Type.Text IsNot "" And txtb_Capacity.Text IsNot "" And txtb_Price.Text IsNot "" Then
-            If Integer.TryParse(txtb_Capacity.Text, 0) Then
-                If Integer.TryParse(txtb_Price.Text, 0) Then
+        Dim price As Integer
+
+        If txtbox_Type.Text IsNot "" And txtbox_Capacity.Text IsNot "" And txtbox_Price.Text IsNot "" Then
+            If Integer.TryParse(txtbox_Capacity.Text, 0) Then
+                If Integer.TryParse(txtbox_Price.Text.Replace(",", ""), price) Then
                     EVCBCheck()
                     If EVCBCheck() = True Then
                         openCon()
                         Try
                             cmd.Connection = con
                             cmd.CommandText = "INSERT INTO tbl_venues (TYPE, CAPACITY, PRICE) VALUES (@type, @capacity, @price)"
-                            cmd.Parameters.AddWithValue("@type", txtb_Type.Text)
-                            cmd.Parameters.AddWithValue("@capacity", txtb_Capacity.Text)
-                            cmd.Parameters.AddWithValue("@price", txtb_Price.Text)
+                            cmd.Parameters.AddWithValue("@type", txtbox_Type.Text)
+                            cmd.Parameters.AddWithValue("@capacity", txtbox_Capacity.Text)
+                            cmd.Parameters.AddWithValue("@price", txtbox_Price.Text)
                             cmd.ExecuteNonQuery()
 
                             cmd.CommandText = "SELECT LAST_INSERT_ID()"
@@ -132,11 +140,11 @@ Public Class EditVenues
 
                         cmd.ExecuteNonQuery()
                         SaveImageToDatabase()
-                        MsgBox("Successfully Added Venue!")
+                        MsgBox("Successfully Added Venue!", MsgBoxStyle.Information, "")
                         con.Close()
-                        txtb_Type.Clear()
-                        txtb_Capacity.Clear()
-                        txtb_Price.Clear()
+                        txtbox_Type.Clear()
+                        txtbox_Capacity.Clear()
+                        txtbox_Price.Clear()
                         EVloadTable()
 
                         DisableEditVenues()
@@ -168,9 +176,9 @@ Public Class EditVenues
 
     Private Sub btn_Edit_Click(sender As Object, e As EventArgs) Handles btn_Edit.Click
         doubleClickEnabled = False
-        txtb_Type.Text = VenueTable("TYPE", VenueTable.CurrentRow.Index).Value
-        txtb_Capacity.Text = VenueTable("CAPACITY", VenueTable.CurrentRow.Index).Value
-        txtb_Price.Text = VenueTable("PRICE", VenueTable.CurrentRow.Index).Value
+        txtbox_Type.Text = VenueTable("TYPE", VenueTable.CurrentRow.Index).Value
+        txtbox_Capacity.Text = VenueTable("CAPACITY", VenueTable.CurrentRow.Index).Value
+        txtbox_Price.Text = VenueTable("PRICE", VenueTable.CurrentRow.Index).Value
 
         Dim features As String = VenueTable.CurrentRow.Cells("FEATURES").Value.ToString()
         UpdateFeatureCheckboxesAdmin(features)
@@ -193,9 +201,9 @@ Public Class EditVenues
 
     Private Sub btn_SaveEdit_Click(sender As Object, e As EventArgs) Handles btn_SaveEdit.Click
         doubleClickEnabled = True
-        If txtb_Type.Text IsNot "" And txtb_Capacity.Text IsNot "" And txtb_Price.Text IsNot "" Then
-            If Integer.TryParse(txtb_Capacity.Text, 0) Then
-                If Integer.TryParse(txtb_Price.Text, 0) Then
+        If txtbox_Type.Text IsNot "" And txtbox_Capacity.Text IsNot "" And txtbox_Price.Text IsNot "" Then
+            If Integer.TryParse(txtbox_Capacity.Text, 0) Then
+                If Integer.TryParse(txtbox_Price.Text, 0) Then
                     EVCBCheck()
                     If EVCBCheck() = True Then
                         openCon()
@@ -204,9 +212,9 @@ Public Class EditVenues
                         UpdateVenueAndFeatures(selectedPlaceID)
                         SaveImageToDatabase()
 
-                        txtb_Type.Clear()
-                        txtb_Capacity.Clear()
-                        txtb_Price.Clear()
+                        txtbox_Type.Clear()
+                        txtbox_Capacity.Clear()
+                        txtbox_Price.Clear()
                         EVloadTable()
 
                         DisableEditVenues()
@@ -247,9 +255,9 @@ Public Class EditVenues
             Dim selectedPlaceID As Integer = VenueTable("PLACEID", VenueTable.CurrentRow.Index).Value
             DeleteVenue(selectedPlaceID)
 
-            txtb_Type.Clear()
-            txtb_Capacity.Clear()
-            txtb_Price.Clear()
+            txtbox_Type.Clear()
+            txtbox_Capacity.Clear()
+            txtbox_Price.Clear()
             EVloadTable()
 
             DisableEditVenues()

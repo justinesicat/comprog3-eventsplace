@@ -22,7 +22,8 @@ Public Class AccountCustomer
 
         If result = DialogResult.Yes Then
             FastFadeToForm(LoginForm, Me)
-            LoginForm.txtb_Username.Clear()
+            LogOut(Me)
+            LoginForm.txtb_UserName.Clear()
             LoginForm.txtb_Password.Clear()
         End If
     End Sub

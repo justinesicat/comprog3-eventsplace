@@ -22,32 +22,35 @@ Partial Class HomeAdminForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.btn_ViewReservations = New System.Windows.Forms.Button()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(HomeAdminForm))
+        Me.btn_BookingApproval = New System.Windows.Forms.Button()
         Me.btn_EditVenues = New System.Windows.Forms.Button()
         Me.lbl_Title = New System.Windows.Forms.Label()
-        Me.pb_Display = New System.Windows.Forms.PictureBox()
+        Me.pbox_Display = New System.Windows.Forms.PictureBox()
         Me.lbl_Username = New System.Windows.Forms.Label()
         Me.btn_Minimize = New System.Windows.Forms.Button()
         Me.btn_Close = New System.Windows.Forms.Button()
         Me.pbox_EditVenues = New System.Windows.Forms.PictureBox()
         Me.pbox_Account = New System.Windows.Forms.PictureBox()
-        CType(Me.pb_Display, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.pbox_BookingApproval = New System.Windows.Forms.PictureBox()
+        CType(Me.pbox_Display, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbox_EditVenues, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbox_Account, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbox_BookingApproval, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'btn_ViewReservations
+        'btn_BookingApproval
         '
-        Me.btn_ViewReservations.BackColor = System.Drawing.Color.DarkOrange
-        Me.btn_ViewReservations.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_ViewReservations.Font = New System.Drawing.Font("Century Gothic", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_ViewReservations.ForeColor = System.Drawing.Color.White
-        Me.btn_ViewReservations.Location = New System.Drawing.Point(216, 467)
-        Me.btn_ViewReservations.Name = "btn_ViewReservations"
-        Me.btn_ViewReservations.Size = New System.Drawing.Size(278, 53)
-        Me.btn_ViewReservations.TabIndex = 18
-        Me.btn_ViewReservations.Text = "View Reservations"
-        Me.btn_ViewReservations.UseVisualStyleBackColor = False
+        Me.btn_BookingApproval.BackColor = System.Drawing.Color.DarkOrange
+        Me.btn_BookingApproval.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_BookingApproval.Font = New System.Drawing.Font("Century Gothic", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_BookingApproval.ForeColor = System.Drawing.Color.White
+        Me.btn_BookingApproval.Location = New System.Drawing.Point(216, 467)
+        Me.btn_BookingApproval.Name = "btn_BookingApproval"
+        Me.btn_BookingApproval.Size = New System.Drawing.Size(278, 53)
+        Me.btn_BookingApproval.TabIndex = 18
+        Me.btn_BookingApproval.Text = "Booking Approval"
+        Me.btn_BookingApproval.UseVisualStyleBackColor = False
         '
         'btn_EditVenues
         '
@@ -75,13 +78,13 @@ Partial Class HomeAdminForm
         Me.lbl_Title.TabIndex = 24
         Me.lbl_Title.Text = "HOME"
         '
-        'pb_Display
+        'pbox_Display
         '
-        Me.pb_Display.Location = New System.Drawing.Point(102, 153)
-        Me.pb_Display.Name = "pb_Display"
-        Me.pb_Display.Size = New System.Drawing.Size(833, 292)
-        Me.pb_Display.TabIndex = 32
-        Me.pb_Display.TabStop = False
+        Me.pbox_Display.Location = New System.Drawing.Point(102, 153)
+        Me.pbox_Display.Name = "pbox_Display"
+        Me.pbox_Display.Size = New System.Drawing.Size(833, 292)
+        Me.pbox_Display.TabIndex = 32
+        Me.pbox_Display.TabStop = False
         '
         'lbl_Username
         '
@@ -140,48 +143,64 @@ Partial Class HomeAdminForm
         Me.pbox_Account.BackColor = System.Drawing.Color.Transparent
         Me.pbox_Account.Cursor = System.Windows.Forms.Cursors.Hand
         Me.pbox_Account.ErrorImage = Nothing
-        Me.pbox_Account.Location = New System.Drawing.Point(0, 413)
+        Me.pbox_Account.Location = New System.Drawing.Point(0, 410)
         Me.pbox_Account.Name = "pbox_Account"
         Me.pbox_Account.Size = New System.Drawing.Size(68, 68)
         Me.pbox_Account.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.pbox_Account.TabIndex = 36
         Me.pbox_Account.TabStop = False
         '
+        'pbox_BookingApproval
+        '
+        Me.pbox_BookingApproval.BackColor = System.Drawing.Color.Transparent
+        Me.pbox_BookingApproval.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.pbox_BookingApproval.ErrorImage = Nothing
+        Me.pbox_BookingApproval.Location = New System.Drawing.Point(0, 68)
+        Me.pbox_BookingApproval.Name = "pbox_BookingApproval"
+        Me.pbox_BookingApproval.Size = New System.Drawing.Size(68, 68)
+        Me.pbox_BookingApproval.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.pbox_BookingApproval.TabIndex = 173
+        Me.pbox_BookingApproval.TabStop = False
+        '
         'HomeAdminForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 19.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackgroundImage = Global.EventsPlace.My.Resources.Resources.AdminHome1
+        Me.BackgroundImage = Global.EventsPlace.My.Resources.Resources.AdminHome
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.ClientSize = New System.Drawing.Size(972, 547)
+        Me.Controls.Add(Me.pbox_BookingApproval)
         Me.Controls.Add(Me.pbox_Account)
         Me.Controls.Add(Me.pbox_EditVenues)
         Me.Controls.Add(Me.btn_Minimize)
         Me.Controls.Add(Me.btn_Close)
-        Me.Controls.Add(Me.pb_Display)
+        Me.Controls.Add(Me.pbox_Display)
         Me.Controls.Add(Me.lbl_Username)
         Me.Controls.Add(Me.lbl_Title)
         Me.Controls.Add(Me.btn_EditVenues)
-        Me.Controls.Add(Me.btn_ViewReservations)
+        Me.Controls.Add(Me.btn_BookingApproval)
         Me.Font = New System.Drawing.Font("Century Gothic", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "HomeAdminForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        CType(Me.pb_Display, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbox_Display, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pbox_EditVenues, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pbox_Account, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbox_BookingApproval, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents btn_ViewReservations As Button
+    Friend WithEvents btn_BookingApproval As Button
     Friend WithEvents btn_EditVenues As Button
     Friend WithEvents lbl_Title As Label
-    Friend WithEvents pb_Display As PictureBox
+    Friend WithEvents pbox_Display As PictureBox
     Friend WithEvents lbl_Username As Label
     Friend WithEvents btn_Minimize As Button
     Friend WithEvents btn_Close As Button
     Friend WithEvents pbox_EditVenues As PictureBox
     Friend WithEvents pbox_Account As PictureBox
+    Friend WithEvents pbox_BookingApproval As PictureBox
 End Class

@@ -27,9 +27,6 @@ Partial Class BookingList
         Me.lbl_Month = New System.Windows.Forms.Label()
         Me.lbl_Year = New System.Windows.Forms.Label()
         Me.lbl_Day = New System.Windows.Forms.Label()
-        Me.Calendar = New System.Windows.Forms.MonthCalendar()
-        Me.btn_BookEvent = New System.Windows.Forms.Button()
-        Me.btn_MyBookings = New System.Windows.Forms.Button()
         Me.lbl_Title = New System.Windows.Forms.Label()
         Me.btn_Minimize = New System.Windows.Forms.Button()
         Me.btn_Close = New System.Windows.Forms.Button()
@@ -39,6 +36,8 @@ Partial Class BookingList
         Me.lbl_Time = New System.Windows.Forms.Label()
         Me.Timer = New System.Windows.Forms.Timer(Me.components)
         Me.lbl_Second = New System.Windows.Forms.Label()
+        Me.btn_Back = New System.Windows.Forms.Button()
+        Me.btn_BookEvent = New System.Windows.Forms.Button()
         CType(Me.pbox_Venue, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbox_Account, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbox_Home, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -79,39 +78,6 @@ Partial Class BookingList
         Me.lbl_Day.Size = New System.Drawing.Size(113, 83)
         Me.lbl_Day.TabIndex = 2
         Me.lbl_Day.Text = "00"
-        '
-        'Calendar
-        '
-        Me.Calendar.Location = New System.Drawing.Point(-255, 539)
-        Me.Calendar.Name = "Calendar"
-        Me.Calendar.TabIndex = 3
-        Me.Calendar.Visible = False
-        '
-        'btn_BookEvent
-        '
-        Me.btn_BookEvent.BackColor = System.Drawing.Color.DarkOrange
-        Me.btn_BookEvent.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_BookEvent.Font = New System.Drawing.Font("Century Gothic", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_BookEvent.ForeColor = System.Drawing.Color.White
-        Me.btn_BookEvent.Location = New System.Drawing.Point(216, 467)
-        Me.btn_BookEvent.Name = "btn_BookEvent"
-        Me.btn_BookEvent.Size = New System.Drawing.Size(278, 53)
-        Me.btn_BookEvent.TabIndex = 24
-        Me.btn_BookEvent.Text = "Book Event"
-        Me.btn_BookEvent.UseVisualStyleBackColor = False
-        '
-        'btn_MyBookings
-        '
-        Me.btn_MyBookings.BackColor = System.Drawing.Color.DarkOrange
-        Me.btn_MyBookings.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_MyBookings.Font = New System.Drawing.Font("Century Gothic", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_MyBookings.ForeColor = System.Drawing.Color.White
-        Me.btn_MyBookings.Location = New System.Drawing.Point(560, 467)
-        Me.btn_MyBookings.Name = "btn_MyBookings"
-        Me.btn_MyBookings.Size = New System.Drawing.Size(278, 53)
-        Me.btn_MyBookings.TabIndex = 25
-        Me.btn_MyBookings.Text = "My Bookings"
-        Me.btn_MyBookings.UseVisualStyleBackColor = False
         '
         'lbl_Title
         '
@@ -219,13 +185,40 @@ Partial Class BookingList
         Me.lbl_Second.Text = ":00"
         Me.lbl_Second.TextAlign = System.Drawing.ContentAlignment.TopRight
         '
+        'btn_Back
+        '
+        Me.btn_Back.BackColor = System.Drawing.Color.DarkOrange
+        Me.btn_Back.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_Back.Font = New System.Drawing.Font("Century Gothic", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_Back.ForeColor = System.Drawing.Color.White
+        Me.btn_Back.Location = New System.Drawing.Point(560, 467)
+        Me.btn_Back.Name = "btn_Back"
+        Me.btn_Back.Size = New System.Drawing.Size(278, 53)
+        Me.btn_Back.TabIndex = 25
+        Me.btn_Back.Text = "Back"
+        Me.btn_Back.UseVisualStyleBackColor = False
+        '
+        'btn_BookEvent
+        '
+        Me.btn_BookEvent.BackColor = System.Drawing.Color.DarkOrange
+        Me.btn_BookEvent.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_BookEvent.Font = New System.Drawing.Font("Century Gothic", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_BookEvent.ForeColor = System.Drawing.Color.White
+        Me.btn_BookEvent.Location = New System.Drawing.Point(216, 467)
+        Me.btn_BookEvent.Name = "btn_BookEvent"
+        Me.btn_BookEvent.Size = New System.Drawing.Size(278, 53)
+        Me.btn_BookEvent.TabIndex = 183
+        Me.btn_BookEvent.Text = "Book Event"
+        Me.btn_BookEvent.UseVisualStyleBackColor = False
+        '
         'BookingList
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 19.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
+        Me.BackgroundImage = Global.EventsPlace.My.Resources.Resources.FinalCustomerBooking
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.ClientSize = New System.Drawing.Size(972, 547)
+        Me.Controls.Add(Me.btn_BookEvent)
         Me.Controls.Add(Me.lbl_Second)
         Me.Controls.Add(Me.lbl_Time)
         Me.Controls.Add(Me.pbox_Home)
@@ -234,14 +227,13 @@ Partial Class BookingList
         Me.Controls.Add(Me.btn_Minimize)
         Me.Controls.Add(Me.btn_Close)
         Me.Controls.Add(Me.lbl_Title)
-        Me.Controls.Add(Me.btn_MyBookings)
-        Me.Controls.Add(Me.btn_BookEvent)
-        Me.Controls.Add(Me.Calendar)
+        Me.Controls.Add(Me.btn_Back)
         Me.Controls.Add(Me.lbl_Day)
         Me.Controls.Add(Me.lbl_Year)
         Me.Controls.Add(Me.lbl_Month)
         Me.Font = New System.Drawing.Font("Century Gothic", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "BookingList"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -256,9 +248,6 @@ Partial Class BookingList
     Friend WithEvents lbl_Month As Label
     Friend WithEvents lbl_Year As Label
     Friend WithEvents lbl_Day As Label
-    Friend WithEvents Calendar As MonthCalendar
-    Friend WithEvents btn_BookEvent As Button
-    Friend WithEvents btn_MyBookings As Button
     Friend WithEvents lbl_Title As Label
     Friend WithEvents btn_Minimize As Button
     Friend WithEvents btn_Close As Button
@@ -268,4 +257,6 @@ Partial Class BookingList
     Friend WithEvents lbl_Time As Label
     Friend WithEvents Timer As Timer
     Friend WithEvents lbl_Second As Label
+    Friend WithEvents btn_Back As Button
+    Friend WithEvents btn_BookEvent As Button
 End Class

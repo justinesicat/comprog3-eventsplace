@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class HomeCustomerForm
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,19 +20,20 @@ Partial Class HomeCustomerForm
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(HomeCustomerForm))
         Me.lbl_Username = New System.Windows.Forms.Label()
         Me.btn_ViewVenues = New System.Windows.Forms.Button()
         Me.btn_Bookings = New System.Windows.Forms.Button()
         Me.lbl_Title = New System.Windows.Forms.Label()
         Me.btn_Minimize = New System.Windows.Forms.Button()
         Me.btn_Close = New System.Windows.Forms.Button()
-        Me.pb_Display = New System.Windows.Forms.PictureBox()
+        Me.pbox_Display = New System.Windows.Forms.PictureBox()
         Me.pbox_Account = New System.Windows.Forms.PictureBox()
         Me.pbox_Venue = New System.Windows.Forms.PictureBox()
         Me.pbox_Booking = New System.Windows.Forms.PictureBox()
-        CType(Me.pb_Display, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbox_Display, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbox_Account, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbox_Venue, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbox_Booking, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -117,13 +118,13 @@ Partial Class HomeCustomerForm
         Me.btn_Close.Text = "x"
         Me.btn_Close.UseVisualStyleBackColor = False
         '
-        'pb_Display
+        'pbox_Display
         '
-        Me.pb_Display.Location = New System.Drawing.Point(102, 153)
-        Me.pb_Display.Name = "pb_Display"
-        Me.pb_Display.Size = New System.Drawing.Size(833, 292)
-        Me.pb_Display.TabIndex = 30
-        Me.pb_Display.TabStop = False
+        Me.pbox_Display.Location = New System.Drawing.Point(102, 153)
+        Me.pbox_Display.Name = "pbox_Display"
+        Me.pbox_Display.Size = New System.Drawing.Size(833, 292)
+        Me.pbox_Display.TabIndex = 30
+        Me.pbox_Display.TabStop = False
         '
         'pbox_Account
         '
@@ -165,13 +166,13 @@ Partial Class HomeCustomerForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 19.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackgroundImage = Global.EventsPlace.My.Resources.Resources.CustomerView
+        Me.BackgroundImage = Global.EventsPlace.My.Resources.Resources.FinalCustomerView
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.ClientSize = New System.Drawing.Size(972, 547)
         Me.Controls.Add(Me.pbox_Booking)
         Me.Controls.Add(Me.pbox_Venue)
         Me.Controls.Add(Me.pbox_Account)
-        Me.Controls.Add(Me.pb_Display)
+        Me.Controls.Add(Me.pbox_Display)
         Me.Controls.Add(Me.btn_Minimize)
         Me.Controls.Add(Me.btn_Close)
         Me.Controls.Add(Me.lbl_Title)
@@ -180,10 +181,11 @@ Partial Class HomeCustomerForm
         Me.Controls.Add(Me.lbl_Username)
         Me.Font = New System.Drawing.Font("Century Gothic", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "HomeCustomerForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        CType(Me.pb_Display, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbox_Display, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pbox_Account, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pbox_Venue, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pbox_Booking, System.ComponentModel.ISupportInitialize).EndInit()
@@ -197,7 +199,7 @@ Partial Class HomeCustomerForm
     Friend WithEvents lbl_Title As Label
     Friend WithEvents btn_Minimize As Button
     Friend WithEvents btn_Close As Button
-    Friend WithEvents pb_Display As PictureBox
+    Friend WithEvents pbox_Display As PictureBox
     Friend WithEvents pbox_Account As PictureBox
     Friend WithEvents pbox_Venue As PictureBox
     Friend WithEvents pbox_Booking As PictureBox

@@ -152,6 +152,30 @@
     <Compile Include="BookEventPart2.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="BookEventPart3.Designer.vb">
+      <DependentUpon>BookEventPart3.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BookEventPart3.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BookEventPayment.Designer.vb">
+      <DependentUpon>BookEventPayment.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BookEventPayment.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BookingApproval.Designer.vb">
+      <DependentUpon>BookingApproval.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BookingApproval.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BookingApprovalDetails.Designer.vb">
+      <DependentUpon>BookingApprovalDetails.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BookingApprovalDetails.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="BookingList.Designer.vb">
       <DependentUpon>BookingList.vb</DependentUpon>
     </Compile>
@@ -162,12 +186,6 @@
       <DependentUpon>EditVenues.vb</DependentUpon>
     </Compile>
     <Compile Include="EditVenues.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Home.Designer.vb">
-      <DependentUpon>Home.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Home.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="HomeAdminForm.Designer.vb">
@@ -188,7 +206,7 @@
     <Compile Include="LoginForm.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Module1.vb" />
+    <Compile Include="MainModule.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -211,6 +229,12 @@
     <Compile Include="RegisterForm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ViewBookingDetails.Designer.vb">
+      <DependentUpon>ViewBookingDetails.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ViewBookingDetails.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ViewVenues.Designer.vb">
       <DependentUpon>ViewVenues.vb</DependentUpon>
     </Compile>
@@ -231,14 +255,23 @@
     <EmbeddedResource Include="BookEventPart2.resx">
       <DependentUpon>BookEventPart2.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BookEventPart3.resx">
+      <DependentUpon>BookEventPart3.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BookEventPayment.resx">
+      <DependentUpon>BookEventPayment.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BookingApproval.resx">
+      <DependentUpon>BookingApproval.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BookingApprovalDetails.resx">
+      <DependentUpon>BookingApprovalDetails.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BookingList.resx">
       <DependentUpon>BookingList.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EditVenues.resx">
       <DependentUpon>EditVenues.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Home.resx">
-      <DependentUpon>Home.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HomeAdminForm.resx">
       <DependentUpon>HomeAdminForm.vb</DependentUpon>
@@ -257,6 +290,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="RegisterForm.resx">
       <DependentUpon>RegisterForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewBookingDetails.resx">
+      <DependentUpon>ViewBookingDetails.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ViewVenues.resx">
       <DependentUpon>ViewVenues.vb</DependentUpon>
@@ -320,6 +356,39 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AdminIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FinalLogoSignUp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FinalCustomerView.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FinalCustomerViewVenues.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FinalCustomerBooking.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FinalCustomerAccount.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Banner1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Banner3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Banner4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Banner5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Banner2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AdminBookingApproval.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
